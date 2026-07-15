@@ -151,10 +151,12 @@
             width: 260px;
             height: 260px;
             border-radius: 30px;
-            object-fit: cover;
+            object-fit: contain;
             border: 6px solid white;
             box-shadow: var(--shadow-lg), 0 0 0 1px var(--border-color);
             transition: transform 0.3s ease;
+            padding: 20px;
+            background: #fff;
         }
 
         .profile img:hover {
@@ -418,18 +420,40 @@
             padding-top: 20px;
         }
 
-        .card a {
-            color: var(--accent);
+        /* Universal Project Button Styling */
+        .card a.store-btn {
             font-weight: 700;
             text-decoration: none;
             display: inline-flex;
             align-items: center;
-            gap: 6px;
-            font-size: 14px;
+            gap: 8px;
+            font-size: 13px;
+            padding: 8px 16px;
+            border-radius: 8px;
+            transition: all 0.2s ease;
         }
 
-        .card a:hover {
-            text-decoration: underline;
+        .card a.play-store {
+            background: #e0f2fe;
+            color: #0369a1;
+        }
+
+        .card a.play-store:hover {
+            background: #bae6fd;
+        }
+
+        .card a.app-store {
+            background: #f1f5f9;
+            color: #334155;
+        }
+
+        .card a.app-store:hover {
+            background: #e2e8f0;
+        }
+
+        .card a.store-btn[data-url=""],
+        .card a.store-btn[data-url="#"] {
+            display: none !important;
         }
 
         /* TECHNICAL STACK CONTAINER WITH LOGOS */
@@ -598,8 +622,7 @@
                 </div>
             </div>
             <div class="profile">
-                <!-- Fallback to professional generic icon vector context if direct profile link isn't configured -->
-                <img src="https://cdn.worldvectorlogo.com/logos/flutter-logo.svg" alt="John Doe Professional Brand Profile">
+                <img src="https://storage.googleapis.com/cms-storage-bucket/0dbfcc7a59cd1cf1733a.png" alt="John Doe Professional Brand Profile">
             </div>
         </div>
     </header>
@@ -688,6 +711,7 @@
         <h2 class="section-title">Production Mobile Deployments</h2>
         <div class="projects-grid">
             
+            <!-- Project 1: Both Links Exist -->
             <div class="card">
                 <div>
                     <div class="app-header">
@@ -705,11 +729,12 @@
                     </div>
                 </div>
                 <div class="app-links">
-                    <a href="#contact">Request Demo Gateway →</a>
-                    <a href="#contact">App Store Target →</a>
+                    <a href="https://play.google.com/store" target="_blank" class="store-btn play-store" data-url="https://play.google.com/store">Google Play</a>
+                    <a href="https://www.apple.com/app-store/" target="_blank" class="store-btn app-store" data-url="https://www.apple.com/app-store/">App Store</a>
                 </div>
             </div>
 
+            <!-- Project 2: Only Play Store Links Exist -->
             <div class="card">
                 <div>
                     <div class="app-header">
@@ -727,10 +752,12 @@
                     </div>
                 </div>
                 <div class="app-links">
-                    <a href="#contact">View Case Study Architecture →</a>
+                    <a href="https://play.google.com/store" target="_blank" class="store-btn play-store" data-url="https://play.google.com/store">Google Play</a>
+                    <a href="" target="_blank" class="store-btn app-store" data-url="">App Store</a>
                 </div>
             </div>
 
+            <!-- Project 3: Only App Store Links Exist -->
             <div class="card">
                 <div>
                     <div class="app-header">
@@ -748,10 +775,12 @@
                     </div>
                 </div>
                 <div class="app-links">
-                    <a href="#contact">View Encrypted Source Git →</a>
+                    <a href="" target="_blank" class="store-btn play-store" data-url="">Google Play</a>
+                    <a href="https://www.apple.com/app-store/" target="_blank" class="store-btn app-store" data-url="https://www.apple.com/app-store/">App Store</a>
                 </div>
             </div>
 
+            <!-- Project 4: No Links Exist (Container hidden) -->
             <div class="card">
                 <div>
                     <div class="app-header">
@@ -769,7 +798,8 @@
                     </div>
                 </div>
                 <div class="app-links">
-                    <a href="#contact">Pub.dev Public Module Link →</a>
+                    <a href="" target="_blank" class="store-btn play-store" data-url="">Google Play</a>
+                    <a href="" target="_blank" class="store-btn app-store" data-url="">App Store</a>
                 </div>
             </div>
 
@@ -865,8 +895,30 @@
 
     <!-- FOOTER METRICS -->
     <footer>
-        &copy; 2026 John Doe. Engineered to elite Flutter cross-platform and native product solutions.
+        &copy; 2026 John Doe. Engineered for elite Flutter cross-platform and native product solutions.
     </footer>
+
+    <!-- DYNAMIC STORE HIDING SCRIPT -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            // Evaluates store buttons and systematically removes empty elements
+            const storeButtons = document.querySelectorAll('.store-btn');
+            storeButtons.forEach(btn => {
+                const url = btn.getAttribute('data-url').trim();
+                if (!url || url === "#" || url === "") {
+                    btn.remove();
+                }
+            });
+
+            // If a project's links tray becomes entirely empty, cleanly hide the border divider container
+            const linksContainers = document.querySelectorAll('.app-links');
+            linksContainers.forEach(container => {
+                if (container.children.length === 0) {
+                    container.style.display = 'none';
+                }
+            });
+        });
+    </script>
 
 </body>
 </html>
