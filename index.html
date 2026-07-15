@@ -1,208 +1,828 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>John Doe | Portfolio</title>
+
+<title>John Doe | Mobile App Developer</title>
+
 
 <style>
+
 *{
     margin:0;
     padding:0;
     box-sizing:border-box;
-    font-family:Arial, sans-serif;
+    font-family:"Inter",Arial,sans-serif;
 }
+
+
 body{
-    background:#f4f4f4;
+    background:#ffffff;
     color:#333;
+    line-height:1.6;
 }
+
+
+/* HERO */
+
 header{
-    background:#0d6efd;
-    color:white;
-    text-align:center;
-    padding:60px 20px;
+
+    background:linear-gradient(135deg,#f4f8ff,#e8f1ff);
+    padding:80px 20px;
+
 }
-header h1{
-    font-size:42px;
+
+
+.hero{
+
+    max-width:1100px;
+    margin:auto;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:40px;
+
 }
-header p{
-    margin-top:10px;
+
+
+.hero-text{
+
+    max-width:650px;
+
+}
+
+
+.hero-text h1{
+
+    font-size:48px;
+    color:#111;
+
+}
+
+
+.hero-text h1 span{
+
+    color:#2563eb;
+
+}
+
+
+
+.hero-text h2{
+
+    color:#2563eb;
+    margin:15px 0;
+    font-size:28px;
+
+}
+
+
+
+.hero-text p{
+
     font-size:18px;
+    color:#555;
+
 }
+
+
+
+.profile img{
+
+    width:230px;
+    height:230px;
+    border-radius:50%;
+    object-fit:cover;
+    border:8px solid white;
+    box-shadow:0 10px 30px rgba(0,0,0,.15);
+
+}
+
+
+
+.btn{
+
+    display:inline-block;
+    padding:12px 25px;
+    border-radius:30px;
+    margin-top:25px;
+    margin-right:10px;
+    text-decoration:none;
+    font-weight:bold;
+    transition:.3s;
+
+}
+
+
+.primary{
+
+    background:#2563eb;
+    color:white;
+
+}
+
+
+.secondary{
+
+    border:2px solid #2563eb;
+    color:#2563eb;
+
+}
+
+
+.btn:hover{
+
+    transform:translateY(-3px);
+
+}
+
+
+
+/* COMMON SECTION */
+
 
 section{
-    max-width:1000px;
+
+    max-width:1100px;
     margin:auto;
-    padding:50px 20px;
+    padding:70px 20px;
+
 }
+
+
 
 h2{
-    margin-bottom:20px;
-    color:#0d6efd;
+
+    color:#111;
+    font-size:32px;
+    margin-bottom:25px;
+
 }
+
+
+h2:after{
+
+    content:"";
+    display:block;
+    width:60px;
+    height:4px;
+    background:#2563eb;
+    margin-top:8px;
+    border-radius:10px;
+
+}
+
+
+
+/* ABOUT */
+
+
+.about{
+
+    font-size:18px;
+    color:#555;
+
+}
+
+
+
+/* EXPERIENCE */
+
+
+.timeline{
+
+    border-left:3px solid #2563eb;
+    padding-left:25px;
+
+}
+
+
+.timeline div{
+
+    margin-bottom:25px;
+
+}
+
+
+.timeline h3{
+
+    color:#2563eb;
+
+}
+
+
+
+
+
+/* PROJECTS */
+
 
 .projects{
+
     display:grid;
     grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-    gap:20px;
+    gap:25px;
+
 }
+
 
 .card{
+
     background:white;
-    padding:20px;
-    border-radius:10px;
-    box-shadow:0 5px 15px rgba(0,0,0,.1);
+    padding:25px;
+    border-radius:15px;
+    border:1px solid #eee;
+    box-shadow:0 10px 25px rgba(0,0,0,.08);
+    transition:.3s;
+
 }
+
+
+.card:hover{
+
+    transform:translateY(-8px);
+
+}
+
+
+.card h3{
+
+    color:#2563eb;
+    margin-bottom:12px;
+
+}
+
+
+.card p{
+
+    color:#555;
+
+}
+
+
 
 .card a{
-    display:inline-block;
-    margin-top:10px;
-    text-decoration:none;
-    color:#0d6efd;
+
+    color:#2563eb;
     font-weight:bold;
+    text-decoration:none;
+
 }
+
+
+.app-icon{
+
+    width:90px;
+    height:90px;
+    border-radius:20px;
+    margin-bottom:15px;
+
+}
+
+
+
+
+
+/* SKILLS */
+
+
+.skills{
+
+    display:flex;
+    flex-wrap:wrap;
+    gap:12px;
+
+}
+
+
+.skill{
+
+    background:#eff6ff;
+    color:#2563eb;
+    padding:10px 18px;
+    border-radius:25px;
+    font-weight:bold;
+
+}
+
+
+
+
+
+/* CONTACT */
+
+
+.contact a{
+
+    color:#2563eb;
+    text-decoration:none;
+
+}
+
+
+
+/* FOOTER */
+
 
 footer{
-    background:#222;
+
+    background:#111827;
     color:white;
     text-align:center;
-    padding:20px;
+    padding:25px;
+
 }
-.btn{
-    display:inline-block;
-    margin:10px;
-    background:white;
-    color:#0d6efd;
-    padding:10px 18px;
-    border-radius:5px;
-    text-decoration:none;
-    font-weight:bold;
+
+
+
+
+@media(max-width:800px){
+
+
+.hero{
+
+    flex-direction:column-reverse;
+    text-align:center;
+
 }
+
+
+.hero-text h1{
+
+    font-size:36px;
+
+}
+
+
+}
+
+
+
 </style>
 
+
 </head>
+
+
+
 <body>
 
+
+
+<!-- HERO -->
+
+
 <header>
-<h1>John Doe</h1>
-<p>Full Stack Web Developer</p>
 
-<a class="btn" href="resume.pdf" target="_blank">
-📄 Download Resume
+
+<div class="hero">
+
+
+<div class="hero-text">
+
+
+<h1>
+
+Hi, I'm <span>John Doe</span>
+
+</h1>
+
+
+<h2>
+
+Mobile App Developer
+
+</h2>
+
+
+
+<p>
+
+Android & Cross Platform Mobile Developer with 3+ years of experience
+building scalable, high-performance and user-friendly applications.
+
+</p>
+
+
+
+<a class="btn primary" href="resume.pdf">
+
+Download Resume
+
 </a>
 
-<a class="btn" href="mailto:john@example.com">
-✉ Contact Me
+
+<a class="btn secondary" href="mailto:john@example.com">
+
+Contact Me
+
 </a>
+
+
+
+</div>
+
+
+
+<div class="profile">
+
+<img src="profile.jpg" alt="Profile Photo">
+
+</div>
+
+
+
+</div>
+
 
 </header>
 
+
+
+
+
+
+
+<!-- ABOUT -->
+
+
 <section>
 
-<h2>About Me</h2>
 
-<p>
-I'm a passionate web developer specializing in HTML, CSS, JavaScript, React, Node.js and MongoDB.
-I enjoy building responsive web applications and solving real-world problems.
+<h2>
+
+About Me
+
+</h2>
+
+
+<p class="about">
+
+
+I am a Mobile Application Developer with 3+ years of experience
+in designing, developing and publishing Android applications.
+I specialize in Kotlin, Java, Flutter, Firebase, REST API integration,
+database management and creating smooth mobile experiences.
+
+
 </p>
+
 
 </section>
 
+
+
+
+
+
+
+<!-- EXPERIENCE -->
+
+
 <section>
 
-<h2>Projects</h2>
+
+<h2>
+
+Experience
+
+</h2>
+
+
+
+<div class="timeline">
+
+
+<div>
+
+<h3>
+
+Mobile App Developer
+
+</h3>
+
+
+<p>
+
+3+ years experience developing Android applications,
+integrating APIs, implementing UI designs, optimizing performance,
+and publishing apps on Google Play Store.
+
+</p>
+
+</div>
+
+
+
+<div>
+
+
+<h3>
+
+Development Expertise
+
+</h3>
+
+
+<p>
+
+Experienced with Android SDK, Kotlin, Java, Flutter,
+React Native, MVVM architecture, Firebase, SQLite,
+Room Database and Git workflow.
+
+</p>
+
+
+</div>
+
+
+</div>
+
+
+</section>
+
+
+
+
+
+
+
+
+<!-- PROJECTS -->
+
+
+<section>
+
+
+<h2>
+
+Featured Projects
+
+</h2>
+
+
 
 <div class="projects">
 
-<div class="card">
-<h3>Weather App</h3>
-<p>Weather application using OpenWeather API.</p>
 
-<a href="https://your-weather-app.vercel.app" target="_blank">
-🌐 Live Demo
-</a>
 
-<br>
 
-<a href="https://github.com/username/weather-app" target="_blank">
-GitHub
-</a>
-
-</div>
 
 <div class="card">
-<h3>Expense Tracker</h3>
-<p>Track income and expenses with charts.</p>
 
-<a href="https://expense-tracker.vercel.app" target="_blank">
-🌐 Live Demo
-</a>
 
-<br>
+<img class="app-icon"
 
-<a href="https://github.com/username/expense-tracker" target="_blank">
-GitHub
-</a>
+src="https://cdn-icons-png.flaticon.com/512/9073/9073363.png"
 
-</div>
+alt="Plotix App Icon">
 
-<div class="card">
-<h3>Portfolio Website</h3>
-<p>Personal responsive portfolio.</p>
 
-<a href="https://portfolio.vercel.app" target="_blank">
-🌐 Live Demo
-</a>
+<h3>
 
-<br>
+Plotix
 
-<a href="https://github.com/username/portfolio" target="_blank">
-GitHub
-</a>
+</h3>
 
-</div>
-
-</div>
-
-</section>
-
-<section>
-
-<h2>Skills</h2>
 
 <p>
-HTML • CSS • JavaScript • React • Node.js • Express • MongoDB • Git • GitHub
+
+Plotix is a mobile application available on Google Play Store.
+Built with modern mobile development practices focusing on
+performance, usability and smooth user experience.
+
 </p>
 
+
+<br>
+
+
+<a href="https://play.google.com/store/apps/details?id=com.plotix.app&hl=en_IN"
+
+target="_blank">
+
+Google Play Store →
+
+</a>
+
+
+</div>
+
+
+
+
+
+
+<div class="card">
+
+
+<h3>
+
+Weather Application
+
+</h3>
+
+
+<p>
+
+Real-time weather application using API integration,
+location services and responsive mobile UI.
+
+</p>
+
+
+<br>
+
+
+<a href="#">
+
+View Project →
+
+</a>
+
+
+</div>
+
+
+
+
+
+
+
+<div class="card">
+
+
+<h3>
+
+Expense Tracker App
+
+</h3>
+
+
+<p>
+
+Personal finance application to manage income,
+expenses and analytics reports.
+
+</p>
+
+
+<br>
+
+
+<a href="#">
+
+View Project →
+
+</a>
+
+
+</div>
+
+
+
+
+</div>
+
+
 </section>
+
+
+
+
+
+
+
+
+<!-- SKILLS -->
+
 
 <section>
 
-<h2>Contact</h2>
 
-<p>Email:
-<a href="mailto:john@example.com">john@example.com</a>
-</p>
+<h2>
 
-<p>LinkedIn:
-<a href="https://linkedin.com/in/johndoe" target="_blank">
-linkedin.com/in/johndoe
-</a>
-</p>
+Technical Skills
 
-<p>GitHub:
-<a href="https://github.com/johndoe" target="_blank">
-github.com/johndoe
-</a>
-</p>
+</h2>
+
+
+
+<div class="skills">
+
+
+<span class="skill">Android SDK</span>
+
+<span class="skill">Kotlin</span>
+
+<span class="skill">Java</span>
+
+<span class="skill">Flutter</span>
+
+<span class="skill">React Native</span>
+
+<span class="skill">Firebase</span>
+
+<span class="skill">REST APIs</span>
+
+<span class="skill">SQLite</span>
+
+<span class="skill">Room Database</span>
+
+<span class="skill">MVVM</span>
+
+<span class="skill">Git</span>
+
+<span class="skill">Google Play Console</span>
+
+
+</div>
+
 
 </section>
+
+
+
+
+
+
+
+<!-- CONTACT -->
+
+
+<section>
+
+
+<h2>
+
+Contact
+
+</h2>
+
+
+
+<p>
+
+Email:
+
+<a href="mailto:john@example.com">
+
+john@example.com
+
+</a>
+
+</p>
+
+
+
+<p>
+
+LinkedIn:
+
+<a href="#">
+
+linkedin.com/in/johndoe
+
+</a>
+
+</p>
+
+
+
+<p>
+
+GitHub:
+
+<a href="#">
+
+github.com/johndoe
+
+</a>
+
+</p>
+
+
+
+</section>
+
+
+
+
+
+
 
 <footer>
 
-© 2026 John Doe | All Rights Reserved
+
+© 2026 John Doe | Mobile App Developer
+
 
 </footer>
 
+
+
 </body>
+
 </html>
