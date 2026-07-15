@@ -1,828 +1,609 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>John Doe | Mobile App Developer</title>
-
-
-<style>
-
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family:"Inter",Arial,sans-serif;
-}
-
-
-body{
-    background:#ffffff;
-    color:#333;
-    line-height:1.6;
-}
-
-
-/* HERO */
-
-header{
-
-    background:linear-gradient(135deg,#f4f8ff,#e8f1ff);
-    padding:80px 20px;
-
-}
-
-
-.hero{
-
-    max-width:1100px;
-    margin:auto;
-    display:flex;
-    align-items:center;
-    justify-content:space-between;
-    gap:40px;
-
-}
-
-
-.hero-text{
-
-    max-width:650px;
-
-}
-
-
-.hero-text h1{
-
-    font-size:48px;
-    color:#111;
-
-}
-
-
-.hero-text h1 span{
-
-    color:#2563eb;
-
-}
-
-
-
-.hero-text h2{
-
-    color:#2563eb;
-    margin:15px 0;
-    font-size:28px;
-
-}
-
-
-
-.hero-text p{
-
-    font-size:18px;
-    color:#555;
-
-}
-
-
-
-.profile img{
-
-    width:230px;
-    height:230px;
-    border-radius:50%;
-    object-fit:cover;
-    border:8px solid white;
-    box-shadow:0 10px 30px rgba(0,0,0,.15);
-
-}
-
-
-
-.btn{
-
-    display:inline-block;
-    padding:12px 25px;
-    border-radius:30px;
-    margin-top:25px;
-    margin-right:10px;
-    text-decoration:none;
-    font-weight:bold;
-    transition:.3s;
-
-}
-
-
-.primary{
-
-    background:#2563eb;
-    color:white;
-
-}
-
-
-.secondary{
-
-    border:2px solid #2563eb;
-    color:#2563eb;
-
-}
-
-
-.btn:hover{
-
-    transform:translateY(-3px);
-
-}
-
-
-
-/* COMMON SECTION */
-
-
-section{
-
-    max-width:1100px;
-    margin:auto;
-    padding:70px 20px;
-
-}
-
-
-
-h2{
-
-    color:#111;
-    font-size:32px;
-    margin-bottom:25px;
-
-}
-
-
-h2:after{
-
-    content:"";
-    display:block;
-    width:60px;
-    height:4px;
-    background:#2563eb;
-    margin-top:8px;
-    border-radius:10px;
-
-}
-
-
-
-/* ABOUT */
-
-
-.about{
-
-    font-size:18px;
-    color:#555;
-
-}
-
-
-
-/* EXPERIENCE */
-
-
-.timeline{
-
-    border-left:3px solid #2563eb;
-    padding-left:25px;
-
-}
-
-
-.timeline div{
-
-    margin-bottom:25px;
-
-}
-
-
-.timeline h3{
-
-    color:#2563eb;
-
-}
-
-
-
-
-
-/* PROJECTS */
-
-
-.projects{
-
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-    gap:25px;
-
-}
-
-
-.card{
-
-    background:white;
-    padding:25px;
-    border-radius:15px;
-    border:1px solid #eee;
-    box-shadow:0 10px 25px rgba(0,0,0,.08);
-    transition:.3s;
-
-}
-
-
-.card:hover{
-
-    transform:translateY(-8px);
-
-}
-
-
-.card h3{
-
-    color:#2563eb;
-    margin-bottom:12px;
-
-}
-
-
-.card p{
-
-    color:#555;
-
-}
-
-
-
-.card a{
-
-    color:#2563eb;
-    font-weight:bold;
-    text-decoration:none;
-
-}
-
-
-.app-icon{
-
-    width:90px;
-    height:90px;
-    border-radius:20px;
-    margin-bottom:15px;
-
-}
-
-
-
-
-
-/* SKILLS */
-
-
-.skills{
-
-    display:flex;
-    flex-wrap:wrap;
-    gap:12px;
-
-}
-
-
-.skill{
-
-    background:#eff6ff;
-    color:#2563eb;
-    padding:10px 18px;
-    border-radius:25px;
-    font-weight:bold;
-
-}
-
-
-
-
-
-/* CONTACT */
-
-
-.contact a{
-
-    color:#2563eb;
-    text-decoration:none;
-
-}
-
-
-
-/* FOOTER */
-
-
-footer{
-
-    background:#111827;
-    color:white;
-    text-align:center;
-    padding:25px;
-
-}
-
-
-
-
-@media(max-width:800px){
-
-
-.hero{
-
-    flex-direction:column-reverse;
-    text-align:center;
-
-}
-
-
-.hero-text h1{
-
-    font-size:36px;
-
-}
-
-
-}
-
-
-
-</style>
-
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>John Doe | Senior Mobile Engineer</title>
+    <!-- Google Fonts for premium typography -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --bg-primary: #0b0f19;
+            --bg-secondary: #111827;
+            --bg-card: #1f2937;
+            --text-primary: #f3f4f6;
+            --text-secondary: #9ca3af;
+            --accent: #3b82f6;
+            --accent-gradient: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%);
+            --border-color: rgba(255, 255, 255, 0.08);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Plus Jakarta Sans", sans-serif;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background-color: var(--bg-primary);
+            color: var(--text-primary);
+            line-height: 1.7;
+        }
+
+        /* HERO SECTION */
+        header {
+            background: radial-gradient(circle at top right, rgba(59, 130, 246, 0.1), transparent 50%), var(--bg-secondary);
+            padding: 100px 24px;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .hero {
+            max-width: 1100px;
+            margin: auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 60px;
+        }
+
+        .hero-text {
+            max-width: 650px;
+        }
+
+        .hero-text h1 {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 54px;
+            font-weight: 700;
+            line-height: 1.1;
+            letter-spacing: -1px;
+        }
+
+        .hero-text h1 span {
+            background: linear-gradient(90deg, #60a5fa, #3b82f6);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .hero-text h2 {
+            color: var(--text-secondary);
+            margin: 15px 0 25px 0;
+            font-size: 24px;
+            font-weight: 500;
+        }
+
+        .hero-text p {
+            font-size: 18px;
+            color: var(--text-secondary);
+            margin-bottom: 35px;
+        }
+
+        .profile img {
+            width: 260px;
+            height: 260px;
+            border-radius: 30px;
+            object-fit: cover;
+            border: 2px solid var(--border-color);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+            transform: rotate(2deg);
+            transition: transform 0.3s ease;
+        }
+
+        .profile img:hover {
+            transform: rotate(0deg) scale(1.02);
+        }
+
+        /* BUTTONS */
+        .btn-group {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            padding: 14px 28px;
+            border-radius: 12px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 15px;
+            transition: all .2s ease;
+        }
+
+        .btn.primary {
+            background: var(--accent-gradient);
+            color: white;
+            box-shadow: 0 4px 14px rgba(59, 130, 246, 0.3);
+        }
+
+        .btn.secondary {
+            border: 1px solid var(--border-color);
+            background: rgba(255, 255, 255, 0.03);
+            color: var(--text-primary);
+        }
+
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(59, 130, 246, 0.4);
+        }
+
+        .btn.secondary:hover {
+            background: rgba(255, 255, 255, 0.08);
+            box-shadow: none;
+        }
+
+        /* COMMON SECTION STYLES */
+        section {
+            max-width: 1100px;
+            margin: auto;
+            padding: 90px 24px;
+        }
+
+        h2.section-title {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 32px;
+            margin-bottom: 45px;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        h2.section-title::after {
+            content: "";
+            flex-grow: 1;
+            height: 1px;
+            background: var(--border-color);
+        }
+
+        /* ABOUT */
+        .about-text {
+            font-size: 18px;
+            color: var(--text-secondary);
+            max-width: 800px;
+        }
+
+        /* EXPERIENCE & EDUCATION */
+        .split-grid {
+            display: grid;
+            grid-template-columns: 1.5fr 1fr;
+            gap: 50px;
+        }
+
+        .timeline {
+            position: relative;
+            border-left: 2px solid var(--border-color);
+            padding-left: 30px;
+        }
+
+        .timeline-item {
+            position: relative;
+            margin-bottom: 40px;
+        }
+
+        .timeline-item::before {
+            content: "";
+            position: absolute;
+            left: -41px;
+            top: 6px;
+            width: 16px;
+            height: 16px;
+            border-radius: 50%;
+            background: var(--bg-primary);
+            border: 3px solid var(--accent);
+        }
+
+        .timeline-date {
+            font-size: 14px;
+            font-weight: 600;
+            color: var(--accent);
+            margin-bottom: 5px;
+        }
+
+        .timeline-item h3 {
+            font-size: 20px;
+            color: var(--text-primary);
+            margin-bottom: 5px;
+        }
+
+        .timeline-company {
+            font-size: 15px;
+            color: var(--text-secondary);
+            margin-bottom: 12px;
+            font-weight: 500;
+        }
+
+        .timeline-item ul {
+            padding-left: 20px;
+            color: var(--text-secondary);
+            font-size: 15px;
+        }
+
+        .timeline-item li {
+            margin-bottom: 8px;
+        }
+
+        /* PROJECTS */
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 30px;
+        }
+
+        .card {
+            background: var(--bg-card);
+            padding: 30px;
+            border-radius: 16px;
+            border: 1px solid var(--border-color);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .card:hover {
+            transform: translateY(-6px);
+            border-color: rgba(59, 130, 246, 0.4);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4);
+        }
+
+        .app-header {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+
+        .app-icon {
+            width: 64px;
+            height: 64px;
+            border-radius: 14px;
+            object-fit: cover;
+            background: #2d3748;
+        }
+
+        .card h3 {
+            font-size: 22px;
+            color: var(--text-primary);
+        }
+
+        .card p {
+            color: var(--text-secondary);
+            font-size: 15px;
+            margin-bottom: 20px;
+            flex-grow: 1;
+        }
+
+        .project-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-bottom: 20px;
+        }
+
+        .project-tag {
+            font-size: 12px;
+            background: rgba(255,255,255,0.05);
+            padding: 4px 10px;
+            border-radius: 6px;
+            color: var(--text-secondary);
+        }
+
+        .card a {
+            color: #60a5fa;
+            font-weight: 600;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+            font-size: 15px;
+        }
+
+        .card a:hover {
+            text-decoration: underline;
+        }
+
+        /* SKILLS CATEGORIES */
+        .skills-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 25px;
+        }
+
+        .skill-category {
+            background: var(--bg-secondary);
+            border: 1px solid var(--border-color);
+            padding: 25px;
+            border-radius: 16px;
+        }
+
+        .skill-category h4 {
+            color: #60a5fa;
+            margin-bottom: 15px;
+            font-size: 16px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .skills-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .skill-badge {
+            background: rgba(59, 130, 246, 0.1);
+            color: #93c5fd;
+            padding: 8px 14px;
+            border-radius: 8px;
+            font-weight: 500;
+            font-size: 14px;
+            border: 1px solid rgba(59, 130, 246, 0.15);
+        }
+
+        /* CONTACT */
+        .contact-box {
+            background: linear-gradient(135deg, var(--bg-card) 0%, var(--bg-secondary) 100%);
+            border: 1px solid var(--border-color);
+            padding: 50px;
+            border-radius: 24px;
+            text-align: center;
+            max-width: 800px;
+            margin: auto;
+        }
+
+        .contact-box p {
+            font-size: 18px;
+            color: var(--text-secondary);
+            margin-bottom: 30px;
+        }
+
+        .contact-links {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;
+        }
+
+        .contact-links a {
+            color: var(--text-primary);
+            text-decoration: none;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            transition: color 0.2s;
+        }
+
+        .contact-links a:hover {
+            color: var(--accent);
+        }
+
+        /* FOOTER */
+        footer {
+            background: #070a12;
+            color: var(--text-secondary);
+            text-align: center;
+            padding: 30px;
+            font-size: 14px;
+            border-top: 1px solid var(--border-color);
+        }
+
+        /* RESPONSIVENESS */
+        @media(max-width: 900px){
+            .hero {
+                flex-direction: column-reverse;
+                text-align: center;
+                gap: 40px;
+            }
+            .hero-text h1 {
+                font-size: 40px;
+            }
+            .btn-group {
+                justify-content: center;
+            }
+            .split-grid {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+        }
+    </style>
 </head>
-
-
-
 <body>
 
-
-
-<!-- HERO -->
-
-
-<header>
-
-
-<div class="hero">
-
-
-<div class="hero-text">
-
-
-<h1>
-
-Hi, I'm <span>John Doe</span>
-
-</h1>
-
-
-<h2>
-
-Mobile App Developer
-
-</h2>
-
-
-
-<p>
-
-Android & Cross Platform Mobile Developer with 3+ years of experience
-building scalable, high-performance and user-friendly applications.
-
-</p>
-
-
-
-<a class="btn primary" href="resume.pdf">
-
-Download Resume
-
-</a>
-
-
-<a class="btn secondary" href="mailto:john@example.com">
-
-Contact Me
-
-</a>
-
-
-
-</div>
-
-
-
-<div class="profile">
-
-<img src="profile.jpg" alt="Profile Photo">
-
-</div>
-
-
-
-</div>
-
-
-</header>
-
-
-
-
-
-
-
-<!-- ABOUT -->
-
-
-<section>
-
-
-<h2>
-
-About Me
-
-</h2>
-
-
-<p class="about">
-
-
-I am a Mobile Application Developer with 3+ years of experience
-in designing, developing and publishing Android applications.
-I specialize in Kotlin, Java, Flutter, Firebase, REST API integration,
-database management and creating smooth mobile experiences.
-
-
-</p>
-
-
-</section>
-
-
-
-
-
-
-
-<!-- EXPERIENCE -->
-
-
-<section>
-
-
-<h2>
-
-Experience
-
-</h2>
-
-
-
-<div class="timeline">
-
-
-<div>
-
-<h3>
-
-Mobile App Developer
-
-</h3>
-
-
-<p>
-
-3+ years experience developing Android applications,
-integrating APIs, implementing UI designs, optimizing performance,
-and publishing apps on Google Play Store.
-
-</p>
-
-</div>
-
-
-
-<div>
-
-
-<h3>
-
-Development Expertise
-
-</h3>
-
-
-<p>
-
-Experienced with Android SDK, Kotlin, Java, Flutter,
-React Native, MVVM architecture, Firebase, SQLite,
-Room Database and Git workflow.
-
-</p>
-
-
-</div>
-
-
-</div>
-
-
-</section>
-
-
-
-
-
-
-
-
-<!-- PROJECTS -->
-
-
-<section>
-
-
-<h2>
-
-Featured Projects
-
-</h2>
-
-
-
-<div class="projects">
-
-
-
-
-
-<div class="card">
-
-
-<img class="app-icon"
-
-src="https://play-lh.googleusercontent.com/9fcI_y-K0ZD7ssPSDUNmE8MkpiOuDSv8IzrlFhsykWLlg8V4rUcCz7NhYO66GoGHveo6wDUbYHq0Ahx8eulKHQ"
-
-alt="Plotix App Icon">
-
-
-<h3>
-
-Plotix
-
-</h3>
-
-
-<p>
-
-Plotix is a mobile application available on Google Play Store.
-Built with modern mobile development practices focusing on
-performance, usability and smooth user experience.
-
-</p>
-
-
-<br>
-
-
-<a href="https://play.google.com/store/apps/details?id=com.plotix.app&hl=en_IN"
-
-target="_blank">
-
-Google Play Store →
-
-</a>
-
-
-</div>
-
-
-
-
-
-
-<div class="card">
-
-
-<h3>
-
-Weather Application
-
-</h3>
-
-
-<p>
-
-Real-time weather application using API integration,
-location services and responsive mobile UI.
-
-</p>
-
-
-<br>
-
-
-<a href="#">
-
-View Project →
-
-</a>
-
-
-</div>
-
-
-
-
-
-
-
-<div class="card">
-
-
-<h3>
-
-Expense Tracker App
-
-</h3>
-
-
-<p>
-
-Personal finance application to manage income,
-expenses and analytics reports.
-
-</p>
-
-
-<br>
-
-
-<a href="#">
-
-View Project →
-
-</a>
-
-
-</div>
-
-
-
-
-</div>
-
-
-</section>
-
-
-
-
-
-
-
-
-<!-- SKILLS -->
-
-
-<section>
-
-
-<h2>
-
-Technical Skills
-
-</h2>
-
-
-
-<div class="skills">
-
-
-<span class="skill">Android SDK</span>
-
-<span class="skill">Kotlin</span>
-
-<span class="skill">Java</span>
-
-<span class="skill">Flutter</span>
-
-<span class="skill">React Native</span>
-
-<span class="skill">Firebase</span>
-
-<span class="skill">REST APIs</span>
-
-<span class="skill">SQLite</span>
-
-<span class="skill">Room Database</span>
-
-<span class="skill">MVVM</span>
-
-<span class="skill">Git</span>
-
-<span class="skill">Google Play Console</span>
-
-
-</div>
-
-
-</section>
-
-
-
-
-
-
-
-<!-- CONTACT -->
-
-
-<section>
-
-
-<h2>
-
-Contact
-
-</h2>
-
-
-
-<p>
-
-Email:
-
-<a href="mailto:john@example.com">
-
-john@example.com
-
-</a>
-
-</p>
-
-
-
-<p>
-
-LinkedIn:
-
-<a href="#">
-
-linkedin.com/in/johndoe
-
-</a>
-
-</p>
-
-
-
-<p>
-
-GitHub:
-
-<a href="#">
-
-github.com/johndoe
-
-</a>
-
-</p>
-
-
-
-</section>
-
-
-
-
-
-
-
-<footer>
-
-
-© 2026 John Doe | Mobile App Developer
-
-
-</footer>
-
-
+    <!-- HERO SECTION -->
+    <header>
+        <div class="hero">
+            <div class="hero-text">
+                <h1>Hi, I'm <span>John Doe</span></h1>
+                <h2>Senior Mobile Application Engineer</h2>
+                <p>
+                    Specializing in building robust, high-performance iOS & Android applications. 
+                    Proven track record of taking complex mobile products from design architectures 
+                    to production deployment on the App Stores.
+                </p>
+                <div class="btn-group">
+                    <a class="btn primary" href="resume.pdf">Download Resume</a>
+                    <a class="btn secondary" href="#contact">Let's Connect</a>
+                </div>
+            </div>
+            <div class="profile">
+                <img src="profile.jpg" alt="John Doe Portrait">
+            </div>
+        </div>
+    </header>
+
+    <!-- ABOUT SECTION -->
+    <section id="about">
+        <h2 class="section-title">About Me</h2>
+        <p class="about-text">
+            I am a results-driven Mobile Application Developer with 3+ years of professional engineering experience. 
+            I craft clean, maintainable code architectures utilizing Native Android patterns and Cross-Platform ecosystems. 
+            Focused on creating fluid user experiences, minimizing app footprint, and integrating bulletproof infrastructure components.
+        </p>
+    </section>
+
+    <!-- EXPERIENCE & EDUCATION -->
+    <section id="experience">
+        <div class="split-grid">
+            <div>
+                <h2 class="section-title">Professional Experience</h2>
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-date">2024 - Present</div>
+                        <h3>Mid-Level Mobile Engineer</h3>
+                        <div class="timeline-company">TechSolutions Corp</div>
+                        <ul>
+                            <li>Spearheaded development of cross-platform apps using Flutter, decreasing code duplication across iOS/Android by 40%.</li>
+                            <li>Integrated complex REST APIs, caching mechanisms, and state management (Bloc/Provider).</li>
+                            <li>Optimized legacy Kotlin codebases, resolving performance bottlenecks and improving frame rates.</li>
+                        </ul>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-date">2023 - 2024</div>
+                        <h3>Junior Android Developer</h3>
+                        <div class="timeline-company">AppVantage Studio</div>
+                        <ul>
+                            <li>Developed, tested, and published native apps implemented in MVVM architectures using Jetpack Compose and Room.</li>
+                            <li>Worked closely with UI/UX design teams to achieve pixel-perfect components and layout animations.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div>
+                <h2 class="section-title">Education & Certifications</h2>
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-date">Graduated 2023</div>
+                        <h3>B.S. in Computer Science</h3>
+                        <div class="timeline-company">State University</div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-date">Credentialed</div>
+                        <h3>Associate Android Developer</h3>
+                        <div class="timeline-company">Google Certification</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PROJECTS SECTION -->
+    <section id="projects">
+        <h2 class="section-title">Featured Production Projects</h2>
+        <div class="projects-grid">
+            
+            <div class="card">
+                <div>
+                    <div class="app-header">
+                        <img class="app-icon" src="https://play-lh.googleusercontent.com/9fcI_y-K0ZD7ssPSDUNmE8MkpiOuDSv8IzrlFhsykWLlg8V4rUcCz7NhYO66GoGHveo6wDUbYHq0Ahx8eulKHQ" alt="Plotix Icon">
+                        <h3>Plotix</h3>
+                    </div>
+                    <p>A production-ready data plotting and analytics dashboard application available globally on Google Play. Built with strict performance criteria for handling massive real-time streams.</p>
+                    <div class="project-tags">
+                        <span class="project-tag">Kotlin</span>
+                        <span class="project-tag">MVVM</span>
+                        <span class="project-tag">WebSockets</span>
+                    </div>
+                </div>
+                <a href="https://play.google.com/store/apps/details?id=com.plotix.app&hl=en_IN" target="_blank">View on Google Play →</a>
+            </div>
+
+            <div class="card">
+                <div>
+                    <div class="app-header">
+                        <div class="app-icon" style="background: linear-gradient(135deg, #38bdf8, #0369a1);"></div>
+                        <h3>Nimbus Weather</h3>
+                    </div>
+                    <p>A modern weather aggregation dashboard using advanced GPS location geofencing and responsive vector particle systems mapped to external REST API payloads.</p>
+                    <div class="project-tags">
+                        <span class="project-tag">Flutter</span>
+                        <span class="project-tag">REST API</span>
+                        <span class="project-tag">Bloc</span>
+                    </div>
+                </div>
+                <a href="#">Source Repository →</a>
+            </div>
+
+            <div class="card">
+                <div>
+                    <div class="app-header">
+                        <div class="app-icon" style="background: linear-gradient(135deg, #4ade80, #166534);"></div>
+                        <h3>Ledger Flow</h3>
+                    </div>
+                    <p>Offline-first personal asset allocation tracking utility. Features comprehensive SQLite/Room local data persistence and beautiful chart visualization wrappers.</p>
+                    <div class="project-tags">
+                        <span class="project-tag">Jetpack Compose</span>
+                        <span class="project-tag">Room DB</span>
+                        <span class="project-tag">Hilt</span>
+                    </div>
+                </div>
+                <a href="#">Source Repository →</a>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- SKILLS SECTION -->
+    <section id="skills">
+        <h2 class="section-title">Technical Expertise</h2>
+        <div class="skills-container">
+            <div class="skill-category">
+                <h4>Languages</h4>
+                <div class="skills-list">
+                    <span class="skill-badge">Kotlin</span>
+                    <span class="skill-badge">Java</span>
+                    <span class="skill-badge">Dart</span>
+                    <span class="skill-badge">JavaScript</span>
+                </div>
+            </div>
+            <div class="skill-category">
+                <h4>Frameworks & Mobile</h4>
+                <div class="skills-list">
+                    <span class="skill-badge">Android SDK</span>
+                    <span class="skill-badge">Jetpack Compose</span>
+                    <span class="skill-badge">Flutter</span>
+                    <span class="skill-badge">React Native</span>
+                </div>
+            </div>
+            <div class="skill-category">
+                <h4>Architecture & Core</h4>
+                <div class="skills-list">
+                    <span class="skill-badge">MVVM / Clean Architecture</span>
+                    <span class="skill-badge">Room / SQLite</span>
+                    <span class="skill-badge">Firebase Ecosystem</span>
+                    <span class="skill-badge">RESTful APIs</span>
+                    <span class="skill-badge">Git & CI/CD Pipelines</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT SECTION -->
+    <section id="contact">
+        <div class="contact-box">
+            <h2 style="font-family: 'Space Grotesk', sans-serif; font-size: 36px; margin-bottom: 15px;">Get In Touch</h2>
+            <p>I am currently open to full-time remote opportunities and contract consultancies.</p>
+            <div class="contact-links">
+                <a href="mailto:john@example.com">john@example.com</a>
+                <a href="#" target="_blank">LinkedIn</a>
+                <a href="#" target="_blank">GitHub</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        &copy; 2026 John Doe. Built for optimal mobile engineering delivery.
+    </footer>
 
 </body>
-
 </html>
