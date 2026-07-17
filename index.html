@@ -1,924 +1,103 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>John Doe | Senior Mobile Application Architect</title>
-    <!-- Google Fonts for enterprise typography -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
-    
-    <style>
-        :root {
-            --bg-primary: #f8fafc;
-            --bg-secondary: #ffffff;
-            --bg-card: #ffffff;
-            --text-primary: #0f172a;
-            --text-secondary: #475569;
-            --accent: #02569b; /* Flutter Corporate Blue */
-            --accent-light: #e0f2fe;
-            --accent-gradient: linear-gradient(135deg, #02569b 0%, #0175c2 100%);
-            --border-color: #e2e8f0;
-            --shadow-sm: 0 1px 3px rgba(0,0,0,0.05);
-            --shadow-md: 0 4px 6px -1px rgba(0,0,0,0.05), 0 2px 4px -1px rgba(0,0,0,0.03);
-            --shadow-lg: 0 20px 25px -5px rgba(0,0,0,0.05), 0 10px 10px -5px rgba(0,0,0,0.02);
-        }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>UPI Payment</title>
+
+<style>
+body{
+    font-family:Arial;
+    background:#f5f5f5;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    height:100vh;
+}
+
+.card{
+    width:350px;
+    background:#fff;
+    padding:25px;
+    border-radius:15px;
+    box-shadow:0 5px 20px rgba(0,0,0,.15);
+    text-align:center;
+}
+
+button{
+    width:100%;
+    padding:15px;
+    font-size:18px;
+    border:none;
+    border-radius:10px;
+    background:#0F9D58;
+    color:white;
+    cursor:pointer;
+}
+
+#status{
+    margin-top:20px;
+    font-weight:bold;
+}
+</style>
 
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: "Plus Jakarta Sans", sans-serif;
-        }
-
-        html {
-            scroll-behavior: smooth;
-        }
-
-        body {
-            background-color: var(--bg-primary);
-            color: var(--text-primary);
-            line-height: 1.7;
-        }
-
-        /* NAVIGATION BAR */
-        nav {
-            background: rgba(255, 255, 255, 0.8);
-            backdrop-filter: blur(12px);
-            border-bottom: 1px solid var(--border-color);
-            position: fixed;
-            top: 0;
-            left: 0;
-            right: 0;
-            z-index: 100;
-            padding: 18px 24px;
-        }
-
-        .nav-container {
-            max-width: 1100px;
-            margin: auto;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .nav-logo {
-            font-family: 'Space Grotesk', sans-serif;
-            font-size: 20px;
-            font-weight: 700;
-            color: var(--text-primary);
-            text-decoration: none;
-        }
-
-        .nav-links {
-            display: flex;
-            gap: 24px;
-            align-items: center;
-        }
-
-        .nav-links a {
-            text-decoration: none;
-            color: var(--text-secondary);
-            font-size: 14px;
-            font-weight: 600;
-            transition: color 0.2s;
-        }
-
-        .nav-links a:hover {
-            color: var(--accent);
-        }
-
-        .nav-cta {
-            background: #0f172a;
-            color: white !important;
-            padding: 8px 16px;
-            border-radius: 8px;
-            font-size: 13px !important;
-        }
-
-        /* HERO SECTION */
-        header {
-            background: radial-gradient(circle at top right, rgba(2, 86, 155, 0.04), transparent 45%), var(--bg-secondary);
-            padding: 160px 24px 100px 24px;
-            border-bottom: 1px solid var(--border-color);
-        }
-
-        .hero {
-            max-width: 1100px;
-            margin: auto;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            gap: 60px;
-        }
-
-        .hero-text {
-            max-width: 650px;
-        }
-
-        .hero-text h1 {
-            font-family: 'Space Grotesk', sans-serif;
-            font-size: 56px;
-            font-weight: 700;
-            line-height: 1.1;
-            letter-spacing: -1.5px;
-            color: var(--text-primary);
-        }
-
-        .hero-text h1 span {
-            color: var(--accent);
-            background: var(--accent-gradient);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-
-        .hero-text h2 {
-            color: var(--text-secondary);
-            margin: 15px 0 25px 0;
-            font-size: 24px;
-            font-weight: 500;
-            letter-spacing: -0.5px;
-        }
-
-        .hero-text p {
-            font-size: 18px;
-            color: var(--text-secondary);
-            margin-bottom: 35px;
-        }
-
-        .profile img {
-            width: 260px;
-            height: 260px;
-            border-radius: 30px;
-            object-fit: contain;
-            border: 6px solid white;
-            box-shadow: var(--shadow-lg), 0 0 0 1px var(--border-color);
-            transition: transform 0.3s ease;
-            padding: 20px;
-            background: #fff;
-        }
-
-        .profile img:hover {
-            transform: scale(1.02);
-        }
-
-        /* METRICS DISPLAY BAR */
-        .metrics-container {
-            max-width: 1100px;
-            margin: -40px auto 0 auto;
-            padding: 0 24px;
-            position: relative;
-            z-index: 10;
-        }
-
-        .metrics-grid {
-            background: var(--bg-secondary);
-            border: 1px solid var(--border-color);
-            border-radius: 20px;
-            padding: 30px;
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 20px;
-            box-shadow: var(--shadow-lg);
-            text-align: center;
-        }
-
-        .metric-card h3 {
-            font-family: 'Space Grotesk', sans-serif;
-            font-size: 32px;
-            color: var(--accent);
-            font-weight: 700;
-        }
-
-        .metric-card p {
-            font-size: 14px;
-            color: var(--text-secondary);
-            font-weight: 600;
-            margin-top: 4px;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-        }
-
-        /* BUTTONS */
-        .btn-group {
-            display: flex;
-            gap: 15px;
-            flex-wrap: wrap;
-        }
-
-        .btn {
-            display: inline-flex;
-            align-items: center;
-            padding: 14px 28px;
-            border-radius: 12px;
-            text-decoration: none;
-            font-weight: 600;
-            font-size: 15px;
-            transition: all .2s ease;
-        }
-
-        .btn.primary {
-            background: var(--accent-gradient);
-            color: white;
-            box-shadow: 0 4px 14px rgba(2, 86, 155, 0.2);
-        }
-
-        .btn.secondary {
-            border: 1px solid var(--border-color);
-            background: var(--bg-secondary);
-            color: var(--text-primary);
-            box-shadow: var(--shadow-sm);
-        }
-
-        .btn:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 6px 20px rgba(2, 86, 155, 0.3);
-        }
-
-        /* SECTION ARCHITECTURE */
-        section {
-            max-width: 1100px;
-            margin: auto;
-            padding: 100px 24px;
-        }
-
-        h2.section-title {
-            font-family: 'Space Grotesk', sans-serif;
-            font-size: 32px;
-            margin-bottom: 45px;
-            display: flex;
-            align-items: center;
-            gap: 15px;
-            color: var(--text-primary);
-            letter-spacing: -0.5px;
-        }
-
-        h2.section-title::after {
-            content: "";
-            flex-grow: 1;
-            height: 1px;
-            background: var(--border-color);
-        }
-
-        .about-text {
-            font-size: 18px;
-            color: var(--text-secondary);
-            max-width: 850px;
-        }
-
-        /* SPLIT LAYOUT FOR TIMELINES */
-        .split-grid {
-            display: grid;
-            grid-template-columns: 1.6fr 1fr;
-            gap: 60px;
-        }
-
-        .timeline {
-            position: relative;
-            border-left: 2px solid var(--border-color);
-            padding-left: 30px;
-        }
-
-        .timeline-item {
-            position: relative;
-            margin-bottom: 45px;
-        }
-
-        .timeline-item::before {
-            content: "";
-            position: absolute;
-            left: -39px;
-            top: 6px;
-            width: 14px;
-            height: 14px;
-            border-radius: 50%;
-            background: var(--bg-primary);
-            border: 3px solid var(--accent);
-        }
-
-        .timeline-date {
-            font-size: 14px;
-            font-weight: 700;
-            color: var(--accent);
-            margin-bottom: 5px;
-        }
-
-        .timeline-item h3 {
-            font-size: 20px;
-            color: var(--text-primary);
-            margin-bottom: 4px;
-            font-weight: 700;
-        }
-
-        .timeline-company {
-            font-size: 14px;
-            color: var(--text-secondary);
-            margin-bottom: 15px;
-            font-weight: 600;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-        }
-
-        .timeline-item ul {
-            padding-left: 20px;
-            color: var(--text-secondary);
-            font-size: 15px;
-        }
-
-        .timeline-item li {
-            margin-bottom: 10px;
-        }
-
-        /* PROJECTS CARD GRID */
-        .projects-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(480px, 1fr));
-            gap: 30px;
-        }
-
-        .card {
-            background: var(--bg-card);
-            padding: 35px;
-            border-radius: 20px;
-            border: 1px solid var(--border-color);
-            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            box-shadow: var(--shadow-sm);
-        }
-
-        .card:hover {
-            transform: translateY(-4px);
-            border-color: #cbd5e1;
-            box-shadow: var(--shadow-lg);
-        }
-
-        .app-header {
-            display: flex;
-            align-items: center;
-            gap: 20px;
-            margin-bottom: 20px;
-        }
-
-        .app-icon {
-            width: 72px;
-            height: 72px;
-            border-radius: 18px;
-            object-fit: contain;
-            background: #f1f5f9;
-            box-shadow: var(--shadow-sm);
-            border: 1px solid var(--border-color);
-            padding: 8px;
-        }
-
-        .card h3 {
-            font-size: 24px;
-            color: var(--text-primary);
-            font-weight: 700;
-        }
-
-        .architecture-badge {
-            display: inline-block;
-            font-size: 11px;
-            font-weight: 700;
-            color: var(--accent);
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-            margin-top: 2px;
-        }
-
-        .card p {
-            color: var(--text-secondary);
-            font-size: 15px;
-            margin-bottom: 20px;
-            flex-grow: 1;
-        }
-
-        .project-tags {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 8px;
-            margin-bottom: 25px;
-        }
-
-        .project-tag {
-            font-size: 12px;
-            background: #f1f5f9;
-            padding: 4px 12px;
-            border-radius: 8px;
-            color: var(--text-secondary);
-            font-weight: 600;
-            border: 1px solid #e2e8f0;
-        }
-
-        .app-links {
-            display: flex;
-            gap: 20px;
-            border-top: 1px solid var(--border-color);
-            padding-top: 20px;
-        }
-
-        /* Universal Project Button Styling */
-        .card a.store-btn {
-            font-weight: 700;
-            text-decoration: none;
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            font-size: 13px;
-            padding: 8px 16px;
-            border-radius: 8px;
-            transition: all 0.2s ease;
-        }
-
-        .card a.play-store {
-            background: #e0f2fe;
-            color: #0369a1;
-        }
-
-        .card a.play-store:hover {
-            background: #bae6fd;
-        }
-
-        .card a.app-store {
-            background: #f1f5f9;
-            color: #334155;
-        }
-
-        .card a.app-store:hover {
-            background: #e2e8f0;
-        }
-
-        .card a.store-btn[data-url=""],
-        .card a.store-btn[data-url="#"] {
-            display: none !important;
-        }
-
-        /* TECHNICAL STACK CONTAINER WITH LOGOS */
-        .skills-container {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-            gap: 30px;
-        }
-
-        .skill-category {
-            background: var(--bg-secondary);
-            border: 1px solid var(--border-color);
-            padding: 35px;
-            border-radius: 20px;
-            box-shadow: var(--shadow-sm);
-        }
-
-        .skill-category h4 {
-            color: var(--text-primary);
-            margin-bottom: 25px;
-            font-size: 16px;
-            font-weight: 700;
-            position: relative;
-            padding-bottom: 8px;
-            border-bottom: 2px solid var(--accent-light);
-        }
-
-        .skills-list {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 12px;
-        }
-
-        .skill-item {
-            display: flex;
-            align-items: center;
-            gap: 12px;
-            background: var(--bg-primary);
-            padding: 10px 14px;
-            border-radius: 12px;
-            border: 1px solid var(--border-color);
-        }
-
-        .skill-logo {
-            width: 22px;
-            height: 22px;
-            object-fit: contain;
-        }
-
-        .skill-name {
-            font-weight: 600;
-            font-size: 13px;
-            color: var(--text-primary);
-        }
-
-        /* CONTACT AREA */
-        .contact-box {
-            background: var(--bg-secondary);
-            border: 1px solid var(--border-color);
-            padding: 60px 40px;
-            border-radius: 24px;
-            text-align: center;
-            max-width: 800px;
-            margin: auto;
-            box-shadow: var(--shadow-md);
-        }
-
-        .contact-box p {
-            font-size: 18px;
-            color: var(--text-secondary);
-            margin-bottom: 35px;
-        }
-
-        .contact-links {
-            display: flex;
-            justify-content: center;
-            gap: 20px;
-            flex-wrap: wrap;
-        }
-
-        .contact-links a {
-            color: var(--text-primary);
-            text-decoration: none;
-            font-weight: 600;
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            padding: 12px 24px;
-            border-radius: 12px;
-            border: 1px solid var(--border-color);
-            transition: all 0.2s;
-            background: var(--bg-primary);
-            font-size: 15px;
-        }
-
-        .contact-links a:hover {
-            color: white;
-            background: var(--accent);
-            border-color: var(--accent);
-            box-shadow: var(--shadow-md);
-        }
-
-        /* FOOTER */
-        footer {
-            background: #0f172a;
-            color: #94a3b8;
-            text-align: center;
-            padding: 40px 24px;
-            font-size: 14px;
-            border-top: 1px solid #1e293b;
-        }
-
-        /* RESPONSIVE MEDIA QUERIES */
-        @media(max-width: 900px){
-            header { padding-top: 120px; }
-            .hero {
-                flex-direction: column-reverse;
-                text-align: center;
-                gap: 40px;
-            }
-            .hero-text h1 { font-size: 42px; }
-            .btn-group { justify-content: center; }
-            .metrics-grid {
-                grid-template-columns: repeat(2, 1fr);
-                gap: 25px;
-            }
-            .projects-grid { grid-template-columns: 1fr; }
-            .split-grid {
-                grid-template-columns: 1fr;
-                gap: 40px;
-            }
-            .skills-list { grid-template-columns: 1fr; }
-        }
-    </style>
 </head>
 <body>
 
-    <!-- ENTERPRISE NAVIGATION BAR -->
-    <nav>
-        <div class="nav-container">
-            <a href="#" class="nav-logo">JD.Dev</a>
-            <div class="nav-links">
-                <a href="#about">About</a>
-                <a href="#experience">Experience</a>
-                <a href="#projects">Deployments</a>
-                <a href="#skills">Architecture</a>
-                <a href="#contact" class="nav-cta">Contact Engineering</a>
-            </div>
-        </div>
-    </nav>
+<div class="card">
 
-    <!-- HERO SECTION -->
-    <header>
-        <div class="hero">
-            <div class="hero-text">
-                <h1>Hi, I'm <span>John Doe</span></h1>
-                <h2>Senior Flutter & Mobile Application Architect</h2>
-                <p>
-                    Specializing in engineering reactive multi-platform mobile experiences with Flutter,
-                    integrated with solid Native (Kotlin/Swift) bridge architectures. Championing pixel-perfect
-                    design systems, smooth 60fps animations, and enterprise-grade state management solutions.
-                </p>
-                <div class="btn-group">
-                    <a class="btn primary" href="#contact">Download Executive Resume</a>
-                    <a class="btn secondary" href="#contact">Consult Project</a>
-                </div>
-            </div>
-            <div class="profile">
-                <img src="https://storage.googleapis.com/cms-storage-bucket/0dbfcc7a59cd1cf1733a.png" alt="John Doe Professional Brand Profile">
-            </div>
-        </div>
-    </header>
+<h2>Pay ₹100</h2>
 
-    <!-- HI-IMPACT MOBILE METRICS BAR -->
-    <div class="metrics-container">
-        <div class="metrics-grid">
-            <div class="metric-card">
-                <h3>3+ Yrs</h3>
-                <p>Industry Domain</p>
-            </div>
-            <div class="metric-card">
-                <h3>15+</h3>
-                <p>Production Releases</p>
-            </div>
-            <div class="metric-card">
-                <h3>99.98%</h3>
-                <p>Stability Index</p>
-            </div>
-            <div class="metric-card">
-                <h3>100K+</h3>
-                <p>End-User Installs</p>
-            </div>
-        </div>
-    </div>
+<p>Merchant : Aman Apps</p>
 
-    <!-- ABOUT SECTION -->
-    <section id="about">
-        <h2 class="section-title">Core Philosophy</h2>
-        <p class="about-text">
-            I am a mobile systems engineer dedicated to optimizing framework runtimes and local database access vectors.
-            Leveraging a deeply technical mastery of **Flutter (Dart)** alongside native core stacks, I bridge the gaps between 
-            dynamic fast-paced visual layers and optimized hardware performance pipelines. Experienced in parsing low-latency 
-            WebSocket layers, custom background painters, and custom plugin bindings.
-        </p>
-    </section>
+<button onclick="startPayment()">
+Pay with UPI
+</button>
 
-    <!-- PROFESSIONAL ENGINE TIMELINES -->
-    <section id="experience">
-        <div class="split-grid">
-            <div>
-                <h2 class="section-title">Professional Experience</h2>
-                <div class="timeline">
-                    <div class="timeline-item">
-                        <div class="timeline-date">2024 - Present</div>
-                        <h3>Senior Flutter & Mobile Developer</h3>
-                        <div class="timeline-company">TechSolutions Corp</div>
-                        <ul>
-                            <li>Migrated legacy native code structures entirely into a unified Flutter system architecture, improving shipping velocity by 50%.</li>
-                            <li>Designed custom Flutter Method Channels to handle high-performance localized device sensor streaming.</li>
-                            <li>Engineered structural modular state packages via Riverpod/BLoC resulting in highly testable code environments.</li>
-                        </ul>
-                    </div>
-                    <div class="timeline-item">
-                        <div class="timeline-date">2023 - 2024</div>
-                        <h3>Mobile UI Specialist</h3>
-                        <div class="timeline-company">AppVantage Studio</div>
-                        <ul>
-                            <li>Built complex CustomPainters, bespoke sliver scroll physics, and optimized heavy rendering workloads for 60fps parity.</li>
-                            <li>Maintained robust offline-first caching paradigms via Hive and secure persistent key-value frameworks.</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            
-            <div>
-                <h2 class="section-title">Education & Credentials</h2>
-                <div class="timeline">
-                    <div class="timeline-item">
-                        <div class="timeline-date">2023</div>
-                        <h3>B.S. in Computer Science</h3>
-                        <div class="timeline-company">State University</div>
-                    </div>
-                    <div class="timeline-item">
-                        <div class="timeline-date">Certified</div>
-                        <h3>Flutter Advanced Engineering</h3>
-                        <div class="timeline-company">Google Developer Group</div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+<div id="status"></div>
 
-    <!-- APP PRODUCTION PROJECTS -->
-    <section id="projects">
-        <h2 class="section-title">Production Mobile Deployments</h2>
-        <div class="projects-grid">
-            
-            <!-- Project 1: Both Links Exist -->
-            <div class="card">
-                <div>
-                    <div class="app-header">
-                        <img class="app-icon" src="https://storage.googleapis.com/cms-storage-bucket/0dbfcc7a59cd1cf1733a.png" alt="Plotix Icon">
-                        <div>
-                            <h3>Plotix Analytics Engine</h3>
-                            <span class="architecture-badge">BLoC Architecture / Clean Domain</span>
-                        </div>
-                    </div>
-                    <p>High-density data visualization system built using Flutter custom engine layers. Renders millions of concurrent telemetry streams cleanly utilizing platform isolates.</p>
-                    <div class="project-tags">
-                        <span class="project-tag">Flutter / Dart</span>
-                        <span class="project-tag">Isolates</span>
-                        <span class="project-tag">WebSockets</span>
-                    </div>
-                </div>
-                <div class="app-links">
-                    <a href="https://play.google.com/store" target="_blank" class="store-btn play-store" data-url="https://play.google.com/store">Google Play</a>
-                    <a href="https://www.apple.com/app-store/" target="_blank" class="store-btn app-store" data-url="https://www.apple.com/app-store/">App Store</a>
-                </div>
-            </div>
+</div>
 
-            <!-- Project 2: Only Play Store Links Exist -->
-            <div class="card">
-                <div>
-                    <div class="app-header">
-                        <img class="app-icon" src="https://cdn.worldvectorlogo.com/logos/xcode-1.svg" alt="Xcode Framework Logo">
-                        <div>
-                            <h3>Nimbus Pro Weather</h3>
-                            <span class="architecture-badge">Riverpod State Framework</span>
-                        </div>
-                    </div>
-                    <p>Hyper-localized predictive forecasting framework utilizing responsive geofence layers and complex background asynchronous synchronization hooks.</p>
-                    <div class="project-tags">
-                        <span class="project-tag">Flutter SDK</span>
-                        <span class="project-tag">Geofencing API</span>
-                        <span class="project-tag">Method Channels</span>
-                    </div>
-                </div>
-                <div class="app-links">
-                    <a href="https://play.google.com/store" target="_blank" class="store-btn play-store" data-url="https://play.google.com/store">Google Play</a>
-                    <a href="" target="_blank" class="store-btn app-store" data-url="">App Store</a>
-                </div>
-            </div>
+<script>
 
-            <!-- Project 3: Only App Store Links Exist -->
-            <div class="card">
-                <div>
-                    <div class="app-header">
-                        <img class="app-icon" src="https://cdn.worldvectorlogo.com/logos/firebase-1.svg" alt="Firebase Engine Icon">
-                        <div>
-                            <h3>CartFlow Commerce</h3>
-                            <span class="architecture-badge">Repository Storage Design</span>
-                        </div>
-                    </div>
-                    <p>Full-scale distributed offline-first commerce framework with real-time sync matrix overlays, algorithmic search caching, and biometric checkout authorization tokens.</p>
-                    <div class="project-tags">
-                        <span class="project-tag">Hive Local Storage</span>
-                        <span class="project-tag">Stripe SDK</span>
-                        <span class="project-tag">Biometrics Layer</span>
-                    </div>
-                </div>
-                <div class="app-links">
-                    <a href="" target="_blank" class="store-btn play-store" data-url="">Google Play</a>
-                    <a href="https://www.apple.com/app-store/" target="_blank" class="store-btn app-store" data-url="https://www.apple.com/app-store/">App Store</a>
-                </div>
-            </div>
+function startPayment(){
 
-            <!-- Project 4: No Links Exist (Container hidden) -->
-            <div class="card">
-                <div>
-                    <div class="app-header">
-                        <img class="app-icon" src="https://storage.googleapis.com/cms-storage-bucket/0dbfcc7a59cd1cf1733a.png" alt="Flutter Icon">
-                        <div>
-                            <h3>Bespoke Components UI</h3>
-                            <span class="architecture-badge">Modular Core Package</span>
-                        </div>
-                    </div>
-                    <p>An enterprise-grade open-source package containing complex custom slivers, specialized parallax scroll physics, and hardware-accelerated fluid physics animations.</p>
-                    <div class="project-tags">
-                        <span class="project-tag">CustomPainter Core</span>
-                        <span class="project-tag">Impeller Performance</span>
-                        <span class="project-tag">Dart Pub</span>
-                    </div>
-                </div>
-                <div class="app-links">
-                    <a href="" target="_blank" class="store-btn play-store" data-url="">Google Play</a>
-                    <a href="" target="_blank" class="store-btn app-store" data-url="">App Store</a>
-                </div>
-            </div>
+    document.getElementById("status").innerHTML="Opening UPI App...";
 
-        </div>
-    </section>
+    const upi =
+        "upi://pay" +
+        "?pa=aman@ybl" +
+        "&pn=Aman Apps" +
+        "&am=100" +
+        "&cu=INR" +
+        "&tn=Order123";
 
-    <!-- FLUTTER & NATIVE TECHNICAL ARCHITECTURE WITH BRAND LOGOS -->
-    <section id="skills">
-        <h2 class="section-title">Technical Matrix</h2>
-        <div class="skills-container">
-            
-            <div class="skill-category">
-                <h4>Core Engines & Ecosystems</h4>
-                <div class="skills-list">
-                    <div class="skill-item">
-                        <img class="skill-logo" src="https://storage.googleapis.com/cms-storage-bucket/0dbfcc7a59cd1cf1733a.png" alt="Flutter Logo">
-                        <span class="skill-name">Flutter Engine</span>
-                    </div>
-                    <div class="skill-item">
-                        <img class="skill-logo" src="https://uxwing.com/wp-content/themes/uxwing/download/brands-and-social-media/android-studio-icon.png" alt="Android Studio Logo">
-                        <span class="skill-name">Android Studio</span>
-                    </div>
-                    <div class="skill-item">
-                        <img class="skill-logo" src="https://cdn.worldvectorlogo.com/logos/xcode-1.svg" alt="Xcode Logo">
-                        <span class="skill-name">Xcode Platform</span>
-                    </div>
-                    <div class="skill-item">
-                        <img class="skill-logo" src="https://cdn.worldvectorlogo.com/logos/git-icon.svg" alt="Git Logo">
-                        <span class="skill-name">Git Automation</span>
-                    </div>
-                </div>
-            </div>
+    window.location.href = upi;
 
-            <div class="skill-category">
-                <h4>Data Architecture & Backends</h4>
-                <div class="skills-list">
-                    <div class="skill-item">
-                        <img class="skill-logo" src="https://cdn.worldvectorlogo.com/logos/firebase-1.svg" alt="Firebase Logo">
-                        <span class="skill-name">Firebase Cluster</span>
-                    </div>
-                    <div class="skill-item">
-                        <img class="skill-logo" src="https://cdn.worldvectorlogo.com/logos/sqlite.svg" alt="SQLite Logo">
-                        <span class="skill-name">SQLite Engine</span>
-                    </div>
-                    <div class="skill-item">
-                        <img class="skill-logo" src="https://cdn.worldvectorlogo.com/logos/graphql-1.svg" alt="GraphQL Logo">
-                        <span class="skill-name">GraphQL / REST</span>
-                    </div>
-                    <div class="skill-item">
-                        <img class="skill-logo" src="https://uxwing.com/wp-content/themes/uxwing/download/brands-and-social-media/google-play-store-icon.png" alt="Play Store Logo">
-                        <span class="skill-name">App Optimization</span>
-                    </div>
-                </div>
-            </div>
+    // Browser loses control here.
 
-            <div class="skill-category">
-                <h4>Languages</h4>
-                <div class="skills-list">
-                    <div class="skill-item">
-                        <img class="skill-logo" src="https://cdn.worldvectorlogo.com/logos/dart.svg" alt="Dart Logo">
-                        <span class="skill-name">Dart Framework</span>
-                    </div>
-                    <div class="skill-item">
-                        <img class="skill-logo" src="https://cdn.worldvectorlogo.com/logos/kotlin-1.svg" alt="Kotlin Logo">
-                        <span class="skill-name">Kotlin Native</span>
-                    </div>
-                    <div class="skill-item">
-                        <img class="skill-logo" src="https://cdn.worldvectorlogo.com/logos/swift-15.svg" alt="Swift Logo">
-                        <span class="skill-name">Swift Native</span>
-                    </div>
-                    <div class="skill-item">
-                        <img class="skill-logo" src="https://cdn.worldvectorlogo.com/logos/javascript-1.svg" alt="JS Logo">
-                        <span class="skill-name">JavaScript</span>
-                    </div>
-                </div>
-            </div>
+}
 
-        </div>
-    </section>
+document.addEventListener("visibilitychange",function(){
 
-    <!-- FOOTER INTERACTION LAYER -->
-    <section id="contact">
-        <div class="contact-box">
-            <h2 style="font-family: 'Space Grotesk', sans-serif; font-size: 36px; margin-bottom: 15px;">Initiate Commercial Inquiry</h2>
-            <p>Ready to deploy robust, multi-platform applications that don't compromise on runtime execution speeds or architectural structure?</p>
-            <div class="contact-links">
-                <a href="mailto:john.doe@example.com?subject=Mobile%20Architecture%20Inquiry">Secure Email Channel</a>
-                <a href="https://linkedin.com" target="_blank">LinkedIn Profile</a>
-                <a href="https://github.com" target="_blank">GitHub Portfolio</a>
-            </div>
-        </div>
-    </section>
+    if(document.visibilityState==="hidden"){
+        console.log("User switched to UPI App");
+    }
 
-    <!-- FOOTER METRICS -->
-    <footer>
-        &copy; 2026 John Doe. Engineered for elite Flutter cross-platform and native product solutions.
-    </footer>
+    if(document.visibilityState==="visible"){
+        document.getElementById("status").innerHTML=
+        "Welcome back.<br>Please check whether your payment was successful.";
+    }
 
-    <!-- DYNAMIC STORE HIDING SCRIPT -->
-    <script>
-        document.addEventListener("DOMContentLoaded", function() {
-            // Evaluates store buttons and systematically removes empty elements
-            const storeButtons = document.querySelectorAll('.store-btn');
-            storeButtons.forEach(btn => {
-                const url = btn.getAttribute('data-url').trim();
-                if (!url || url === "#" || url === "") {
-                    btn.remove();
-                }
-            });
+});
 
-            // If a project's links tray becomes entirely empty, cleanly hide the border divider container
-            const linksContainers = document.querySelectorAll('.app-links');
-            linksContainers.forEach(container => {
-                if (container.children.length === 0) {
-                    container.style.display = 'none';
-                }
-            });
-        });
-    </script>
+window.addEventListener("focus",function(){
+
+    console.log("Browser focused again");
+
+});
+
+</script>
 
 </body>
 </html>
