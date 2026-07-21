@@ -3982,7 +3982,17 @@
     © 2026 Amandeep Singh · Flutter Developer · Full-Stack Developer.
 
 </footer>
-```
+<script>
+    // Prevent browser from remembering the previous scroll position
+    if ("scrollRestoration" in history) {
+        history.scrollRestoration = "manual";
+    }
+
+    // Always start at the top when page loads/refreshed
+    window.addEventListener("load", function () {
+        window.scrollTo(0, 0);
+    });
+</script>
 
 </body>
 
