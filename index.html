@@ -6,11 +6,14 @@
 
 ```
 <meta charset="UTF-8">
+
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Amandeep Singh | Flutter & AI-Assisted Product Engineer</title>
+<title>Amandeep Singh | Flutter & Full-Stack Developer</title>
+
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
+
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap"
@@ -22,24 +25,24 @@
     :root {
 
         --primary: #02569b;
-        --primary-dark: #014b86;
+
         --primary-light: #e0f2fe;
 
         --purple: #7c3aed;
 
         --dark: #0f172a;
+
         --text: #334155;
+
         --muted: #64748b;
 
         --background: #f8fafc;
+
         --white: #ffffff;
+
         --border: #e2e8f0;
 
-        --gradient: linear-gradient(
-            135deg,
-            #02569b,
-            #7c3aed
-        );
+        --gradient: linear-gradient(135deg, #02569b, #7c3aed);
 
         --shadow-sm: 0 4px 15px rgba(15, 23, 42, .05);
 
@@ -53,6 +56,7 @@
     * {
 
         margin: 0;
+
         padding: 0;
 
         box-sizing: border-box;
@@ -94,7 +98,9 @@
         position: fixed;
 
         top: 0;
+
         left: 0;
+
         right: 0;
 
         z-index: 1000;
@@ -290,6 +296,7 @@
     .status-dot {
 
         width: 8px;
+
         height: 8px;
 
         background: #22c55e;
@@ -435,7 +442,7 @@
     }
 
 
-    /* ================= AI ORBIT ================= */
+    /* ================= HERO IMAGE ================= */
 
     .hero-image {
 
@@ -533,17 +540,34 @@
 
         height: 48px;
 
-        color: white;
+        padding: 12px;
+
+        background: white;
+
+        border: 1px solid var(--border);
 
         border-radius: 15px;
-
-        font-size: 20px;
-
-        font-weight: 800;
 
         box-shadow: var(--shadow-md);
 
         animation: floating 4s ease-in-out infinite;
+
+    }
+
+
+    .floating-ai img {
+
+        width: 25px;
+
+        height: 25px;
+
+        padding: 0;
+
+        border: 0;
+
+        border-radius: 0;
+
+        box-shadow: none;
 
     }
 
@@ -554,8 +578,6 @@
 
         right: 10px;
 
-        background: #10a37f;
-
     }
 
 
@@ -564,16 +586,6 @@
         right: -25px;
 
         bottom: 50px;
-
-        background: linear-gradient(
-
-            135deg,
-
-            #4285f4,
-
-            #9334e6
-
-        );
 
         animation-delay: 1s;
 
@@ -585,8 +597,6 @@
         bottom: -20px;
 
         left: 20px;
-
-        background: #111827;
 
         animation-delay: 2s;
 
@@ -919,8 +929,6 @@
 
     .ai-card {
 
-        position: relative;
-
         display: flex;
 
         align-items: flex-start;
@@ -965,67 +973,26 @@
 
         flex-shrink: 0;
 
-        width: 48px;
+        width: 52px;
 
-        height: 48px;
+        height: 52px;
 
-        color: white;
+        background: #f8fafc;
 
-        border-radius: 14px;
+        border: 1px solid var(--border);
 
-        font-size: 23px;
-
-        font-weight: 800;
+        border-radius: 15px;
 
     }
 
 
-    .chatgpt-icon {
+    .ai-icon img {
 
-        background: #10a37f;
+        width: 28px;
 
-    }
+        height: 28px;
 
-
-    .gemini-icon {
-
-        background: linear-gradient(
-
-            135deg,
-
-            #4285f4,
-
-            #9334e6
-
-        );
-
-    }
-
-
-    .claude-icon {
-
-        background: #d97757;
-
-    }
-
-
-    .cursor-icon {
-
-        background: #111827;
-
-    }
-
-
-    .antigravity-icon {
-
-        background: var(--gradient);
-
-    }
-
-
-    .api-icon {
-
-        background: #0f172a;
+        object-fit: contain;
 
     }
 
@@ -1396,8 +1363,6 @@
     }
 
 
-    /* AI TECH BADGE */
-
     .ai-tech {
 
         color: #6d28d9;
@@ -1445,11 +1410,18 @@
     }
 
 
+    .store-button:hover {
+
+        transform: translateY(-2px);
+
+    }
+
+
     .store-button img {
 
-        width: 18px;
+        width: 20px;
 
-        height: 18px;
+        height: 20px;
 
         object-fit: contain;
 
@@ -1474,7 +1446,7 @@
     }
 
 
-    /* ================= TECHNOLOGY STACK ================= */
+    /* ================= TECHNOLOGY ================= */
 
     .technology-grid {
 
@@ -1544,56 +1516,24 @@
 
         flex-shrink: 0;
 
-        color: white;
+        padding: 8px;
+
+        background: #f8fafc;
+
+        border: 1px solid var(--border);
 
         border-radius: 11px;
 
-        font-size: 18px;
-
-        font-weight: 800;
-
     }
 
 
-    .chatgpt-bg {
+    .technology-ai-icon img {
 
-        background: #10a37f;
+        width: 22px;
 
-    }
+        height: 22px;
 
-
-    .gemini-bg {
-
-        background: linear-gradient(
-
-            135deg,
-
-            #4285f4,
-
-            #9334e6
-
-        );
-
-    }
-
-
-    .claude-bg {
-
-        background: #d97757;
-
-    }
-
-
-    .cursor-bg {
-
-        background: #111827;
-
-    }
-
-
-    .antigravity-bg {
-
-        background: var(--gradient);
+        object-fit: contain;
 
     }
 
@@ -1840,7 +1780,14 @@
 
             height: 40px;
 
-            font-size: 17px;
+        }
+
+
+        .floating-ai img {
+
+            width: 21px;
+
+            height: 21px;
 
         }
 
@@ -1918,7 +1865,6 @@
 
         }
 
-
     }
 
 </style>
@@ -1990,7 +1936,7 @@
 
                 Mobile Engineer.
 
-                <span>AI-Assisted.</span>
+                <span>AI-Powered.</span>
 
                 Product-Focused.
 
@@ -1999,24 +1945,26 @@
 
             <h2>
 
-                Flutter Developer & AI-Assisted Product Engineer
+                Flutter Developer & Full-Stack Developer
 
             </h2>
 
 
             <p class="hero-description">
 
-                I'm Amandeep Singh, a Flutter Developer with 3+ years of
+                I'm Amandeep Singh, a Flutter and Full-Stack Developer
 
-                experience building scalable Android and iOS applications.
+                with 3+ years of experience building scalable Android,
 
-                I combine strong software engineering fundamentals with
+                iOS, and web applications.
 
-                modern AI-powered development workflows using ChatGPT,
+                I use modern AI development tools such as ChatGPT,
 
-                Gemini, Claude, Cursor, and Antigravity to build and ship
+                Gemini, Claude, Cursor, and Antigravity to accelerate
 
-                products faster.
+                development, solve complex engineering problems,
+
+                and build products faster.
 
             </p>
 
@@ -2050,21 +1998,27 @@
 
             <div class="floating-ai">
 
-                ✦
+                <img src="https://cdn.simpleicons.org/openai"
+
+                    alt="ChatGPT">
 
             </div>
 
 
             <div class="floating-ai">
 
-                ✦
+                <img src="https://cdn.simpleicons.org/googlegemini"
+
+                    alt="Gemini">
 
             </div>
 
 
             <div class="floating-ai">
 
-                ⌘
+                <img src="https://cdn.simpleicons.org/cursor"
+
+                    alt="Cursor">
 
             </div>
 
@@ -2157,35 +2111,31 @@
 
             <p>
 
+                I am a Flutter and Full-Stack Developer focused on
 
-                I am a Flutter Developer and AI-Assisted Product Engineer
+                building reliable, scalable, and visually polished
 
-                focused on building reliable, scalable, and visually
-
-                polished mobile applications.
-
+                mobile and web applications.
 
                 <br><br>
-
 
                 My experience covers the complete product lifecycle —
 
                 from converting designs into responsive interfaces to
 
-                integrating APIs, Firebase services, payments, notifications,
+                integrating APIs, Firebase services, payments,
 
-                real-time systems, and deploying applications to app stores.
+                notifications, real-time systems, and deploying
 
+                applications to app stores.
 
                 <br><br>
 
+                I combine strong software engineering fundamentals
 
-                I use modern AI tools as engineering accelerators while
+                with modern AI tools to improve development speed,
 
-                maintaining strong fundamentals in architecture, debugging,
-
-                code quality, and production development.
-
+                problem-solving, and product delivery.
 
             </p>
 
@@ -2293,7 +2243,6 @@
 
         </p>
 
-
     </div>
 
 
@@ -2303,9 +2252,11 @@
         <div class="ai-card">
 
 
-            <div class="ai-icon chatgpt-icon">
+            <div class="ai-icon">
 
-                ✦
+                <img src="https://cdn.simpleicons.org/openai"
+
+                    alt="ChatGPT">
 
             </div>
 
@@ -2331,16 +2282,18 @@
         <div class="ai-card">
 
 
-            <div class="ai-icon gemini-icon">
+            <div class="ai-icon">
 
-                ✦
+                <img src="https://cdn.simpleicons.org/googlegemini"
+
+                    alt="Google Gemini">
 
             </div>
 
 
             <div>
 
-                <h3>Gemini</h3>
+                <h3>Google Gemini</h3>
 
                 <p>
 
@@ -2359,9 +2312,11 @@
         <div class="ai-card">
 
 
-            <div class="ai-icon claude-icon">
+            <div class="ai-icon">
 
-                ◈
+                <img src="https://cdn.simpleicons.org/claude"
+
+                    alt="Claude">
 
             </div>
 
@@ -2387,9 +2342,11 @@
         <div class="ai-card">
 
 
-            <div class="ai-icon cursor-icon">
+            <div class="ai-icon">
 
-                ⌘
+                <img src="https://cdn.simpleicons.org/cursor"
+
+                    alt="Cursor">
 
             </div>
 
@@ -2415,9 +2372,11 @@
         <div class="ai-card">
 
 
-            <div class="ai-icon antigravity-icon">
+            <div class="ai-icon">
 
-                🚀
+                <img src="https://www.svgrepo.com/show/535711/rocket.svg"
+
+                    alt="Antigravity">
 
             </div>
 
@@ -2443,9 +2402,11 @@
         <div class="ai-card">
 
 
-            <div class="ai-icon api-icon">
+            <div class="ai-icon">
 
-                ⚡
+                <img src="https://cdn.simpleicons.org/openai"
+
+                    alt="AI APIs">
 
             </div>
 
@@ -2600,9 +2561,9 @@
 
                         <li>
 
-                            Used AI-assisted development workflows to
+                            Used AI tools to improve development speed,
 
-                            improve problem solving and development speed.
+                            debugging, and problem solving.
 
                         </li>
 
@@ -2875,8 +2836,6 @@
     <div class="projects-grid">
 
 
-        <!-- MYDRESSR AI -->
-
         <div class="project-card">
 
 
@@ -2915,13 +2874,11 @@
 
             <p class="project-description">
 
-
                 AI-powered virtual fashion application that allows users
 
                 to change outfits on their body images using LightX AI
 
                 and background removal technology.
-
 
             </p>
 
@@ -2929,39 +2886,15 @@
             <div class="tech-stack">
 
 
-                <span class="tech">
+                <span class="tech">Flutter</span>
 
-                    Flutter
+                <span class="tech">GetX</span>
 
-                </span>
+                <span class="tech">Dio</span>
 
+                <span class="tech ai-tech">AI Integration</span>
 
-                <span class="tech">
-
-                    GetX
-
-                </span>
-
-
-                <span class="tech">
-
-                    Dio
-
-                </span>
-
-
-                <span class="tech ai-tech">
-
-                    ✦ AI Integration
-
-                </span>
-
-
-                <span class="tech ai-tech">
-
-                    LightX AI
-
-                </span>
+                <span class="tech ai-tech">LightX AI</span>
 
 
             </div>
@@ -2974,6 +2907,12 @@
 
                     class="store-button play-store">
 
+
+                    <img src="https://cdn.simpleicons.org/googleplay"
+
+                        alt="Google Play">
+
+
                     Google Play
 
                 </a>
@@ -2982,6 +2921,12 @@
                 <a href="#"
 
                     class="store-button app-store">
+
+
+                    <img src="https://cdn.simpleicons.org/appstore"
+
+                        alt="App Store">
+
 
                     App Store
 
@@ -2993,8 +2938,6 @@
 
         </div>
 
-
-        <!-- KOFKART -->
 
         <div class="project-card">
 
@@ -3034,13 +2977,11 @@
 
             <p class="project-description">
 
-
                 Fast and scalable quick-commerce application built for
 
                 seamless ordering from local stores with optimized APIs
 
                 and smooth navigation.
-
 
             </p>
 
@@ -3048,32 +2989,13 @@
             <div class="tech-stack">
 
 
-                <span class="tech">
+                <span class="tech">Flutter</span>
 
-                    Flutter
+                <span class="tech">GetX</span>
 
-                </span>
+                <span class="tech">Dio</span>
 
-
-                <span class="tech">
-
-                    GetX
-
-                </span>
-
-
-                <span class="tech">
-
-                    Dio
-
-                </span>
-
-
-                <span class="tech">
-
-                    REST API
-
-                </span>
+                <span class="tech">REST API</span>
 
 
             </div>
@@ -3086,6 +3008,12 @@
 
                     class="store-button play-store">
 
+
+                    <img src="https://cdn.simpleicons.org/googleplay"
+
+                        alt="Google Play">
+
+
                     Google Play
 
                 </a>
@@ -3094,6 +3022,12 @@
                 <a href="#"
 
                     class="store-button app-store">
+
+
+                    <img src="https://cdn.simpleicons.org/appstore"
+
+                        alt="App Store">
+
 
                     App Store
 
@@ -3105,8 +3039,6 @@
 
         </div>
 
-
-        <!-- HAULR -->
 
         <div class="project-card">
 
@@ -3146,13 +3078,11 @@
 
             <p class="project-description">
 
-
                 Transport and logistics application featuring live vehicle
 
                 tracking, Google Maps, real-time location updates, and
 
                 PayPal payment integration.
-
 
             </p>
 
@@ -3160,39 +3090,15 @@
             <div class="tech-stack">
 
 
-                <span class="tech">
+                <span class="tech">Flutter</span>
 
-                    Flutter
+                <span class="tech">GetX</span>
 
-                </span>
+                <span class="tech">Firebase</span>
 
+                <span class="tech">Google Maps</span>
 
-                <span class="tech">
-
-                    GetX
-
-                </span>
-
-
-                <span class="tech">
-
-                    Firebase
-
-                </span>
-
-
-                <span class="tech">
-
-                    Google Maps
-
-                </span>
-
-
-                <span class="tech">
-
-                    PayPal
-
-                </span>
+                <span class="tech">PayPal</span>
 
 
             </div>
@@ -3205,6 +3111,12 @@
 
                     class="store-button play-store">
 
+
+                    <img src="https://cdn.simpleicons.org/googleplay"
+
+                        alt="Google Play">
+
+
                     Google Play
 
                 </a>
@@ -3213,6 +3125,12 @@
                 <a href="#"
 
                     class="store-button app-store">
+
+
+                    <img src="https://cdn.simpleicons.org/appstore"
+
+                        alt="App Store">
+
 
                     App Store
 
@@ -3224,8 +3142,6 @@
 
         </div>
 
-
-        <!-- STOCK PATHSHALA -->
 
         <div class="project-card">
 
@@ -3265,13 +3181,11 @@
 
             <p class="project-description">
 
-
                 Stock learning application with premium content access
 
                 through In-App Purchases. Worked on maintenance,
 
                 performance improvements, and bug fixing.
-
 
             </p>
 
@@ -3279,32 +3193,13 @@
             <div class="tech-stack">
 
 
-                <span class="tech">
+                <span class="tech">Flutter</span>
 
-                    Flutter
+                <span class="tech">GetX</span>
 
-                </span>
+                <span class="tech">Firebase</span>
 
-
-                <span class="tech">
-
-                    GetX
-
-                </span>
-
-
-                <span class="tech">
-
-                    Firebase
-
-                </span>
-
-
-                <span class="tech">
-
-                    In-App Purchases
-
-                </span>
+                <span class="tech">In-App Purchases</span>
 
 
             </div>
@@ -3321,6 +3216,12 @@
 
                     class="store-button play-store">
 
+
+                    <img src="https://cdn.simpleicons.org/googleplay"
+
+                        alt="Google Play">
+
+
                     Google Play
 
                 </a>
@@ -3329,6 +3230,12 @@
                 <a href="#"
 
                     class="store-button app-store">
+
+
+                    <img src="https://cdn.simpleicons.org/appstore"
+
+                        alt="App Store">
+
 
                     App Store
 
@@ -3340,8 +3247,6 @@
 
         </div>
 
-
-        <!-- SAHAGO -->
 
         <div class="project-card">
 
@@ -3381,13 +3286,11 @@
 
             <p class="project-description">
 
-
                 Food and cosmetic scanning application that provides
 
                 product information and insights using cloud data
 
                 and responsive mobile interfaces.
-
 
             </p>
 
@@ -3395,32 +3298,13 @@
             <div class="tech-stack">
 
 
-                <span class="tech">
+                <span class="tech">Flutter</span>
 
-                    Flutter
+                <span class="tech">Firebase</span>
 
-                </span>
+                <span class="tech">GetX</span>
 
-
-                <span class="tech">
-
-                    Firebase
-
-                </span>
-
-
-                <span class="tech">
-
-                    GetX
-
-                </span>
-
-
-                <span class="tech">
-
-                    Scanner
-
-                </span>
+                <span class="tech">Scanner</span>
 
 
             </div>
@@ -3433,6 +3317,12 @@
 
                     class="store-button play-store">
 
+
+                    <img src="https://cdn.simpleicons.org/googleplay"
+
+                        alt="Google Play">
+
+
                     Google Play
 
                 </a>
@@ -3441,6 +3331,12 @@
                 <a href="#"
 
                     class="store-button app-store">
+
+
+                    <img src="https://cdn.simpleicons.org/appstore"
+
+                        alt="App Store">
+
 
                     App Store
 
@@ -3452,8 +3348,6 @@
 
         </div>
 
-
-        <!-- GRUVE -->
 
         <div class="project-card">
 
@@ -3493,13 +3387,11 @@
 
             <p class="project-description">
 
-
                 Dynamic social media application featuring video streaming,
 
                 user interactions, HTTP APIs, WebSockets, and Provider
 
                 state management.
-
 
             </p>
 
@@ -3507,32 +3399,13 @@
             <div class="tech-stack">
 
 
-                <span class="tech">
+                <span class="tech">Flutter</span>
 
-                    Flutter
+                <span class="tech">Provider</span>
 
-                </span>
+                <span class="tech">WebSockets</span>
 
-
-                <span class="tech">
-
-                    Provider
-
-                </span>
-
-
-                <span class="tech">
-
-                    WebSockets
-
-                </span>
-
-
-                <span class="tech">
-
-                    Video Streaming
-
-                </span>
+                <span class="tech">Video Streaming</span>
 
 
             </div>
@@ -3545,6 +3418,12 @@
 
                     class="store-button play-store">
 
+
+                    <img src="https://cdn.simpleicons.org/googleplay"
+
+                        alt="Google Play">
+
+
                     Google Play
 
                 </a>
@@ -3553,6 +3432,12 @@
                 <a href="#"
 
                     class="store-button app-store">
+
+
+                    <img src="https://cdn.simpleicons.org/appstore"
+
+                        alt="App Store">
+
 
                     App Store
 
@@ -3586,9 +3471,8 @@
     <div class="technology-grid">
 
 
-        <!-- Flutter -->
-
         <div class="technology-card">
+
 
             <img class="technology-icon"
 
@@ -3605,12 +3489,12 @@
 
             </div>
 
+
         </div>
 
 
-        <!-- Dart -->
-
         <div class="technology-card">
+
 
             <img class="technology-icon"
 
@@ -3627,12 +3511,12 @@
 
             </div>
 
+
         </div>
 
 
-        <!-- Firebase -->
-
         <div class="technology-card">
+
 
             <img class="technology-icon"
 
@@ -3649,12 +3533,12 @@
 
             </div>
 
+
         </div>
 
 
-        <!-- Android -->
-
         <div class="technology-card">
+
 
             <img class="technology-icon"
 
@@ -3671,12 +3555,12 @@
 
             </div>
 
+
         </div>
 
 
-        <!-- Kotlin -->
-
         <div class="technology-card">
+
 
             <img class="technology-icon"
 
@@ -3693,12 +3577,12 @@
 
             </div>
 
+
         </div>
 
 
-        <!-- Java -->
-
         <div class="technology-card">
+
 
             <img class="technology-icon"
 
@@ -3715,12 +3599,12 @@
 
             </div>
 
+
         </div>
 
 
-        <!-- Xcode -->
-
         <div class="technology-card">
+
 
             <img class="technology-icon"
 
@@ -3737,12 +3621,12 @@
 
             </div>
 
+
         </div>
 
 
-        <!-- Git -->
-
         <div class="technology-card">
+
 
             <img class="technology-icon"
 
@@ -3759,12 +3643,12 @@
 
             </div>
 
+
         </div>
 
 
-        <!-- GitHub -->
-
         <div class="technology-card">
+
 
             <img class="technology-icon"
 
@@ -3781,12 +3665,12 @@
 
             </div>
 
+
         </div>
 
 
-        <!-- Android Studio -->
-
         <div class="technology-card">
+
 
             <img class="technology-icon"
 
@@ -3803,100 +3687,12 @@
 
             </div>
 
-        </div>
-
-
-        <!-- Google Maps -->
-
-        <div class="technology-card">
-
-            <img class="technology-icon"
-
-                src="https://www.svgrepo.com/show/375444/google-maps-platform.svg"
-
-                alt="Google Maps">
-
-
-            <div>
-
-                <strong>Google Maps</strong>
-
-                <span>Maps & location</span>
-
-            </div>
 
         </div>
 
 
-        <!-- AdMob -->
-
         <div class="technology-card">
 
-            <img class="technology-icon"
-
-                src="https://www.svgrepo.com/show/353801/google-admob.svg"
-
-                alt="AdMob">
-
-
-            <div>
-
-                <strong>AdMob</strong>
-
-                <span>App monetization</span>
-
-            </div>
-
-        </div>
-
-
-        <!-- REST API -->
-
-        <div class="technology-card">
-
-            <img class="technology-icon"
-
-                src="https://www.svgrepo.com/show/375531/api.svg"
-
-                alt="REST API">
-
-
-            <div>
-
-                <strong>REST APIs</strong>
-
-                <span>Backend integration</span>
-
-            </div>
-
-        </div>
-
-
-        <!-- Cloudinary -->
-
-        <div class="technology-card">
-
-            <img class="technology-icon"
-
-                src="https://cdn.simpleicons.org/cloudinary/3448C5"
-
-                alt="Cloudinary">
-
-
-            <div>
-
-                <strong>Cloudinary</strong>
-
-                <span>Media management</span>
-
-            </div>
-
-        </div>
-
-
-        <!-- Figma -->
-
-        <div class="technology-card">
 
             <img class="technology-icon"
 
@@ -3913,12 +3709,12 @@
 
             </div>
 
+
         </div>
 
 
-        <!-- Postman -->
-
         <div class="technology-card">
+
 
             <img class="technology-icon"
 
@@ -3935,12 +3731,12 @@
 
             </div>
 
+
         </div>
 
 
-        <!-- VS Code -->
-
         <div class="technology-card">
+
 
             <img class="technology-icon"
 
@@ -3957,60 +3753,20 @@
 
             </div>
 
-        </div>
-
-
-        <!-- Provider -->
-
-        <div class="technology-card">
-
-            <img class="technology-icon"
-
-                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flutter/flutter-original.svg"
-
-                alt="Provider">
-
-
-            <div>
-
-                <strong>Provider</strong>
-
-                <span>State management</span>
-
-            </div>
 
         </div>
 
 
-        <!-- GetX -->
-
         <div class="technology-card">
 
-            <img class="technology-icon"
 
-                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flutter/flutter-original.svg"
-
-                alt="GetX">
+            <div class="technology-ai-icon">
 
 
-            <div>
+                <img src="https://cdn.simpleicons.org/openai"
 
-                <strong>GetX</strong>
+                    alt="ChatGPT">
 
-                <span>State management</span>
-
-            </div>
-
-        </div>
-
-
-        <!-- ChatGPT -->
-
-        <div class="technology-card">
-
-            <div class="technology-ai-icon chatgpt-bg">
-
-                ✦
 
             </div>
 
@@ -4023,16 +3779,20 @@
 
             </div>
 
+
         </div>
 
 
-        <!-- Gemini -->
-
         <div class="technology-card">
 
-            <div class="technology-ai-icon gemini-bg">
 
-                ✦
+            <div class="technology-ai-icon">
+
+
+                <img src="https://cdn.simpleicons.org/googlegemini"
+
+                    alt="Google Gemini">
+
 
             </div>
 
@@ -4045,16 +3805,20 @@
 
             </div>
 
+
         </div>
 
 
-        <!-- Claude -->
-
         <div class="technology-card">
 
-            <div class="technology-ai-icon claude-bg">
 
-                ◈
+            <div class="technology-ai-icon">
+
+
+                <img src="https://cdn.simpleicons.org/claude"
+
+                    alt="Claude">
+
 
             </div>
 
@@ -4067,16 +3831,20 @@
 
             </div>
 
+
         </div>
 
 
-        <!-- Cursor -->
-
         <div class="technology-card">
 
-            <div class="technology-ai-icon cursor-bg">
 
-                ⌘
+            <div class="technology-ai-icon">
+
+
+                <img src="https://cdn.simpleicons.org/cursor"
+
+                    alt="Cursor">
+
 
             </div>
 
@@ -4089,16 +3857,20 @@
 
             </div>
 
+
         </div>
 
 
-        <!-- Antigravity -->
-
         <div class="technology-card">
 
-            <div class="technology-ai-icon antigravity-bg">
 
-                🚀
+            <div class="technology-ai-icon">
+
+
+                <img src="https://www.svgrepo.com/show/535711/rocket.svg"
+
+                    alt="Antigravity">
+
 
             </div>
 
@@ -4107,9 +3879,10 @@
 
                 <strong>Antigravity</strong>
 
-                <span>AI-assisted development</span>
+                <span>AI development workflow</span>
 
             </div>
+
 
         </div>
 
@@ -4143,7 +3916,6 @@
 
             to move faster?
 
-
             <br>
 
             Let's connect.
@@ -4154,98 +3926,29 @@
         <div class="contact-links">
 
 
-            <!-- EMAIL -->
-
             <a class="contact-link"
 
                 href="mailto:amanaulakh70822@gmail.com">
 
 
-                <svg width="18"
-
-                    height="18"
-
-                    viewBox="0 0 24 24"
-
-                    fill="none"
-
-                    xmlns="http://www.w3.org/2000/svg">
-
-
-                    <path
-
-                        d="M4 4H20C21.1 4 22 4.9 22 6V18C22 19.1 21.1 20 20 20H4C2.9 20 2 19.1 2 18V6C2 4.9 2.9 4 4 4Z"
-
-                        stroke="currentColor"
-
-                        stroke-width="2"
-
-                        stroke-linecap="round"
-
-                        stroke-linejoin="round"/>
-
-
-                    <polyline
-
-                        points="22,6 12,13 2,6"
-
-                        stroke="currentColor"
-
-                        stroke-width="2"
-
-                        stroke-linecap="round"
-
-                        stroke-linejoin="round"/>
-
-
-                </svg>
-
+                ✉
 
                 Email Me
 
             </a>
 
 
-            <!-- CALL -->
-
             <a class="contact-link"
 
                 href="tel:7082244101">
 
 
-                <svg width="18"
-
-                    height="18"
-
-                    viewBox="0 0 24 24"
-
-                    fill="none"
-
-                    xmlns="http://www.w3.org/2000/svg">
-
-
-                    <path
-
-                        d="M22 16.92V20.92C22 21.47 21.55 21.92 21 21.92C10.51 21.92 2 13.41 2 2.92C2 2.37 2.45 1.92 3 1.92H7C7.55 1.92 8 2.37 8 2.92C8 4.34 8.23 5.74 8.68 7.08C8.82 7.5 8.72 7.97 8.4 8.29L6.7 9.99C8.17 12.57 10.35 14.75 12.93 16.22L14.63 14.52C14.95 14.2 15.42 14.1 15.84 14.24C17.18 14.69 18.58 14.92 20 14.92C20.55 14.92 21 15.37 21 15.92V16.92H22Z"
-
-                        stroke="currentColor"
-
-                        stroke-width="2"
-
-                        stroke-linecap="round"
-
-                        stroke-linejoin="round"/>
-
-
-                </svg>
-
+                ☎
 
                 Call Me
 
             </a>
 
-
-            <!-- LINKEDIN -->
 
             <a class="contact-link"
 
@@ -4256,24 +3959,7 @@
                 rel="noopener noreferrer">
 
 
-                <svg width="18"
-
-                    height="18"
-
-                    viewBox="0 0 24 24"
-
-                    fill="currentColor"
-
-                    xmlns="http://www.w3.org/2000/svg">
-
-
-                    <path
-
-                        d="M20.45 20.45H16.89V14.87C16.89 13.54 16.87 11.83 15.05 11.83C13.2 11.83 12.92 13.28 12.92 14.77V20.45H9.36V8.99H12.78V10.56H12.83C13.3 9.66 14.47 8.71 16.2 8.71C19.81 8.71 20.45 11.09 20.45 14.19V20.45ZM5.34 7.42C4.2 7.42 3.28 6.5 3.28 5.36C3.28 4.22 4.2 3.3 5.34 3.3C6.48 3.3 7.4 4.22 7.4 5.36C7.4 6.5 6.48 7.42 5.34 7.42ZM7.12 20.45H3.56V8.99H7.12V20.45ZM22.22 0H1.77C0.79 0 0 0.77 0 1.72V22.28C0 23.23 0.79 24 1.77 24H22.22C23.2 24 24 23.23 24 22.28V1.72C24 0.77 23.2 0 22.22 0Z"/>
-
-
-                </svg>
-
+                in
 
                 LinkedIn
 
@@ -4293,7 +3979,7 @@
 
 <footer>
 
-    © 2026 Amandeep Singh · Flutter Developer · AI-Assisted Product Engineer.
+    © 2026 Amandeep Singh · Flutter Developer · Full-Stack Developer.
 
 </footer>
 ```
