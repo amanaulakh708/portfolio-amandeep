@@ -8,21 +8,24 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Amandeep Singh | Flutter Developer</title>
+<title>Amandeep Singh | Flutter & AI-Assisted Product Engineer</title>
 
-<!-- Google Fonts -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap"
     rel="stylesheet">
 
+
 <style>
 
     :root {
+
         --primary: #02569b;
         --primary-dark: #014b86;
         --primary-light: #e0f2fe;
+
+        --purple: #7c3aed;
 
         --dark: #0f172a;
         --text: #334155;
@@ -32,200 +35,362 @@
         --white: #ffffff;
         --border: #e2e8f0;
 
-        --gradient: linear-gradient(135deg, #02569b, #0175c2);
+        --gradient: linear-gradient(
+            135deg,
+            #02569b,
+            #7c3aed
+        );
 
         --shadow-sm: 0 4px 15px rgba(15, 23, 42, .05);
+
         --shadow-md: 0 15px 40px rgba(15, 23, 42, .08);
+
         --shadow-lg: 0 25px 70px rgba(15, 23, 42, .12);
+
     }
+
 
     * {
+
         margin: 0;
         padding: 0;
+
         box-sizing: border-box;
+
     }
+
 
     html {
+
         scroll-behavior: smooth;
+
     }
+
 
     body {
+
         background: var(--background);
+
         color: var(--dark);
+
         font-family: "Inter", sans-serif;
+
         line-height: 1.7;
+
     }
 
+
     a {
+
         text-decoration: none;
+
     }
+
 
     /* ================= NAVBAR ================= */
 
     nav {
+
         position: fixed;
+
         top: 0;
         left: 0;
         right: 0;
+
         z-index: 1000;
 
         padding: 17px 24px;
 
-        background: rgba(255, 255, 255, .85);
+        background: rgba(255, 255, 255, .86);
+
         backdrop-filter: blur(18px);
 
         border-bottom: 1px solid rgba(226, 232, 240, .8);
+
     }
 
+
     .nav-container {
+
         max-width: 1180px;
+
         margin: auto;
 
         display: flex;
+
         align-items: center;
+
         justify-content: space-between;
+
     }
 
+
     .logo {
+
         color: var(--dark);
 
         font-family: "Space Grotesk", sans-serif;
+
         font-size: 21px;
+
         font-weight: 700;
+
     }
+
 
     .logo span {
+
         color: var(--primary);
+
     }
+
 
     .nav-links {
+
         display: flex;
+
         align-items: center;
+
         gap: 27px;
+
     }
 
+
     .nav-links a {
+
         color: var(--text);
 
         font-size: 14px;
+
         font-weight: 600;
 
         transition: .2s;
+
     }
+
 
     .nav-links a:hover {
+
         color: var(--primary);
+
     }
 
+
     .nav-contact {
+
         padding: 9px 17px;
 
         color: white !important;
+
         background: var(--dark);
 
         border-radius: 8px;
+
     }
+
 
     /* ================= HERO ================= */
 
     header {
-        padding: 170px 24px 110px;
+
+        position: relative;
+
+        overflow: hidden;
+
+        padding: 170px 24px 120px;
 
         background:
-            radial-gradient(circle at 85% 20%,
-            rgba(2, 86, 155, .10),
-            transparent 35%),
-            linear-gradient(180deg, #ffffff, #f8fafc);
+
+            radial-gradient(
+
+                circle at 85% 20%,
+
+                rgba(2, 86, 155, .12),
+
+                transparent 35%
+
+            ),
+
+            radial-gradient(
+
+                circle at 10% 80%,
+
+                rgba(124, 58, 237, .08),
+
+                transparent 30%
+
+            ),
+
+            linear-gradient(
+
+                180deg,
+
+                #ffffff,
+
+                #f8fafc
+
+            );
+
     }
 
+
     .hero {
+
         max-width: 1180px;
+
         margin: auto;
 
         display: flex;
+
         align-items: center;
+
         justify-content: space-between;
 
         gap: 70px;
+
     }
+
 
     .hero-content {
-        max-width: 720px;
+
+        max-width: 760px;
+
     }
 
+
     .status-badge {
+
         display: inline-flex;
+
         align-items: center;
+
         gap: 8px;
 
         margin-bottom: 22px;
+
         padding: 7px 13px;
 
         color: var(--primary);
+
         background: var(--primary-light);
 
         border-radius: 30px;
 
         font-size: 12px;
+
         font-weight: 700;
 
         text-transform: uppercase;
+
         letter-spacing: .5px;
+
     }
 
+
     .status-dot {
+
         width: 8px;
         height: 8px;
 
         background: #22c55e;
 
         border-radius: 50%;
+
+        animation: pulse 2s infinite;
+
     }
 
+
+    @keyframes pulse {
+
+        0% {
+
+            box-shadow: 0 0 0 0 rgba(34, 197, 94, .5);
+
+        }
+
+        70% {
+
+            box-shadow: 0 0 0 8px rgba(34, 197, 94, 0);
+
+        }
+
+        100% {
+
+            box-shadow: 0 0 0 0 rgba(34, 197, 94, 0);
+
+        }
+
+    }
+
+
     .hero h1 {
+
         font-family: "Space Grotesk", sans-serif;
 
         font-size: 67px;
+
         line-height: 1.02;
 
         letter-spacing: -2.5px;
+
     }
 
+
     .hero h1 span {
+
         background: var(--gradient);
 
         -webkit-background-clip: text;
+
         -webkit-text-fill-color: transparent;
+
     }
 
+
     .hero h2 {
+
         margin: 22px 0 18px;
 
         color: var(--text);
 
         font-size: 25px;
+
         font-weight: 600;
+
     }
 
+
     .hero-description {
-        max-width: 700px;
+
+        max-width: 720px;
 
         margin-bottom: 32px;
 
         color: var(--muted);
 
         font-size: 17px;
+
     }
+
 
     .hero-buttons {
+
         display: flex;
+
         flex-wrap: wrap;
+
         gap: 13px;
+
     }
 
+
     .button {
+
         display: inline-flex;
+
         align-items: center;
+
         gap: 9px;
 
         padding: 13px 21px;
@@ -233,48 +398,108 @@
         border-radius: 10px;
 
         font-size: 14px;
+
         font-weight: 700;
 
         transition: .25s;
+
     }
+
 
     .button:hover {
+
         transform: translateY(-3px);
+
     }
 
+
     .button-primary {
+
         color: white;
+
         background: var(--gradient);
 
         box-shadow: 0 8px 22px rgba(2, 86, 155, .22);
+
     }
 
+
     .button-secondary {
+
         color: var(--dark);
+
         background: white;
 
         border: 1px solid var(--border);
+
     }
+
+
+    /* ================= AI ORBIT ================= */
 
     .hero-image {
+
         position: relative;
+
+        width: 300px;
+
+        height: 300px;
+
+        flex-shrink: 0;
+
     }
 
+
     .hero-image::before {
+
         content: "";
 
         position: absolute;
-        inset: -20px;
 
-        z-index: -1;
+        inset: -25px;
 
-        background: var(--primary-light);
+        background: linear-gradient(
 
-        border-radius: 40px;
+            135deg,
+
+            rgba(2, 86, 155, .12),
+
+            rgba(124, 58, 237, .12)
+
+        );
+
+        border-radius: 50%;
+
+        animation: rotateGlow 8s linear infinite;
+
     }
 
+
+    @keyframes rotateGlow {
+
+        from {
+
+            transform: rotate(0deg);
+
+        }
+
+        to {
+
+            transform: rotate(360deg);
+
+        }
+
+    }
+
+
     .hero-image img {
+
+        position: relative;
+
+        z-index: 2;
+
         width: 280px;
+
         height: 280px;
 
         padding: 25px;
@@ -284,26 +509,130 @@
         background: white;
 
         border: 1px solid var(--border);
+
         border-radius: 35px;
 
         box-shadow: var(--shadow-lg);
+
     }
+
+
+    .floating-ai {
+
+        position: absolute;
+
+        z-index: 5;
+
+        display: flex;
+
+        align-items: center;
+
+        justify-content: center;
+
+        width: 48px;
+
+        height: 48px;
+
+        color: white;
+
+        border-radius: 15px;
+
+        font-size: 20px;
+
+        font-weight: 800;
+
+        box-shadow: var(--shadow-md);
+
+        animation: floating 4s ease-in-out infinite;
+
+    }
+
+
+    .floating-ai:nth-child(2) {
+
+        top: -25px;
+
+        right: 10px;
+
+        background: #10a37f;
+
+    }
+
+
+    .floating-ai:nth-child(3) {
+
+        right: -25px;
+
+        bottom: 50px;
+
+        background: linear-gradient(
+
+            135deg,
+
+            #4285f4,
+
+            #9334e6
+
+        );
+
+        animation-delay: 1s;
+
+    }
+
+
+    .floating-ai:nth-child(4) {
+
+        bottom: -20px;
+
+        left: 20px;
+
+        background: #111827;
+
+        animation-delay: 2s;
+
+    }
+
+
+    @keyframes floating {
+
+        0%, 100% {
+
+            transform: translateY(0);
+
+        }
+
+        50% {
+
+            transform: translateY(-12px);
+
+        }
+
+    }
+
 
     /* ================= METRICS ================= */
 
     .metrics {
+
         max-width: 1180px;
 
         margin: -45px auto 0;
+
         padding: 0 24px;
 
         position: relative;
+
         z-index: 5;
+
     }
 
+
     .metrics-grid {
+
         display: grid;
+
         grid-template-columns: repeat(4, 1fr);
+
         gap: 20px;
 
         padding: 28px;
@@ -311,55 +640,84 @@
         background: white;
 
         border: 1px solid var(--border);
+
         border-radius: 20px;
 
         box-shadow: var(--shadow-md);
+
     }
+
 
     .metric {
+
         text-align: center;
+
     }
 
+
     .metric h3 {
+
         color: var(--primary);
 
         font-family: "Space Grotesk", sans-serif;
+
         font-size: 31px;
+
     }
 
+
     .metric p {
+
         color: var(--muted);
 
         font-size: 11px;
+
         font-weight: 700;
 
         text-transform: uppercase;
+
         letter-spacing: .6px;
+
     }
+
 
     /* ================= SECTIONS ================= */
 
     section {
+
         max-width: 1180px;
 
         margin: auto;
+
         padding: 105px 24px;
+
     }
 
+
     .section-heading {
+
         display: flex;
+
         align-items: center;
+
         gap: 18px;
 
         margin-bottom: 48px;
+
     }
+
 
     .section-heading h2 {
+
         font-family: "Space Grotesk", sans-serif;
+
         font-size: 34px;
+
     }
 
+
     .section-heading::after {
+
         content: "";
 
         flex: 1;
@@ -367,9 +725,12 @@
         height: 1px;
 
         background: var(--border);
+
     }
 
+
     .section-label {
+
         display: block;
 
         margin-bottom: 8px;
@@ -377,148 +738,525 @@
         color: var(--primary);
 
         font-size: 12px;
+
         font-weight: 800;
 
         text-transform: uppercase;
+
         letter-spacing: 1px;
+
     }
+
 
     /* ================= ABOUT ================= */
 
     .about-layout {
+
         display: grid;
+
         grid-template-columns: 1fr 1fr;
+
         gap: 30px;
+
     }
 
+
     .about-card {
+
         padding: 35px;
 
         background: white;
 
         border: 1px solid var(--border);
+
         border-radius: 20px;
 
         box-shadow: var(--shadow-sm);
+
     }
+
 
     .about-card p {
+
         color: var(--text);
+
         font-size: 16px;
+
     }
+
 
     .highlight-list {
+
         display: grid;
+
         grid-template-columns: 1fr 1fr;
+
         gap: 13px;
+
     }
 
+
     .highlight {
+
         padding: 18px;
 
         background: var(--background);
 
         border: 1px solid var(--border);
+
         border-radius: 12px;
+
     }
 
+
     .highlight strong {
+
         display: block;
 
         color: var(--primary);
+
         font-size: 19px;
+
     }
 
+
     .highlight span {
+
         color: var(--muted);
 
         font-size: 12px;
+
         font-weight: 600;
+
     }
+
+
+    /* ================= AI DEVELOPMENT ================= */
+
+    #ai-development {
+
+        position: relative;
+
+        overflow: hidden;
+
+        background:
+
+            radial-gradient(
+
+                circle at 15% 20%,
+
+                rgba(2, 86, 155, .08),
+
+                transparent 30%
+
+            ),
+
+            radial-gradient(
+
+                circle at 85% 80%,
+
+                rgba(124, 58, 237, .08),
+
+                transparent 30%
+
+            );
+
+    }
+
+
+    .ai-intro {
+
+        max-width: 720px;
+
+        margin-bottom: 42px;
+
+    }
+
+
+    .ai-intro h3 {
+
+        margin-bottom: 15px;
+
+        font-family: "Space Grotesk", sans-serif;
+
+        font-size: 35px;
+
+        line-height: 1.2;
+
+    }
+
+
+    .ai-intro h3 span {
+
+        background: var(--gradient);
+
+        -webkit-background-clip: text;
+
+        -webkit-text-fill-color: transparent;
+
+    }
+
+
+    .ai-intro p {
+
+        color: var(--muted);
+
+        font-size: 16px;
+
+    }
+
+
+    .ai-grid {
+
+        display: grid;
+
+        grid-template-columns: repeat(3, 1fr);
+
+        gap: 18px;
+
+    }
+
+
+    .ai-card {
+
+        position: relative;
+
+        display: flex;
+
+        align-items: flex-start;
+
+        gap: 16px;
+
+        min-height: 155px;
+
+        padding: 23px;
+
+        background: rgba(255, 255, 255, .8);
+
+        border: 1px solid var(--border);
+
+        border-radius: 18px;
+
+        box-shadow: var(--shadow-sm);
+
+        transition: .3s;
+
+    }
+
+
+    .ai-card:hover {
+
+        transform: translateY(-7px);
+
+        border-color: #93c5fd;
+
+        box-shadow: var(--shadow-lg);
+
+    }
+
+
+    .ai-icon {
+
+        display: flex;
+
+        align-items: center;
+
+        justify-content: center;
+
+        flex-shrink: 0;
+
+        width: 48px;
+
+        height: 48px;
+
+        color: white;
+
+        border-radius: 14px;
+
+        font-size: 23px;
+
+        font-weight: 800;
+
+    }
+
+
+    .chatgpt-icon {
+
+        background: #10a37f;
+
+    }
+
+
+    .gemini-icon {
+
+        background: linear-gradient(
+
+            135deg,
+
+            #4285f4,
+
+            #9334e6
+
+        );
+
+    }
+
+
+    .claude-icon {
+
+        background: #d97757;
+
+    }
+
+
+    .cursor-icon {
+
+        background: #111827;
+
+    }
+
+
+    .antigravity-icon {
+
+        background: var(--gradient);
+
+    }
+
+
+    .api-icon {
+
+        background: #0f172a;
+
+    }
+
+
+    .ai-card h3 {
+
+        margin-bottom: 6px;
+
+        font-family: "Space Grotesk", sans-serif;
+
+        font-size: 18px;
+
+    }
+
+
+    .ai-card p {
+
+        color: var(--muted);
+
+        font-size: 12px;
+
+        line-height: 1.6;
+
+    }
+
+
+    /* ================= AI WORKFLOW ================= */
+
+    .ai-workflow {
+
+        display: flex;
+
+        align-items: center;
+
+        justify-content: center;
+
+        max-width: 800px;
+
+        margin: 55px auto 0;
+
+        padding: 25px;
+
+        background: white;
+
+        border: 1px solid var(--border);
+
+        border-radius: 18px;
+
+        box-shadow: var(--shadow-sm);
+
+    }
+
+
+    .workflow-step {
+
+        display: flex;
+
+        flex-direction: column;
+
+        align-items: center;
+
+        gap: 4px;
+
+        min-width: 80px;
+
+    }
+
+
+    .workflow-step strong {
+
+        color: var(--primary);
+
+        font-family: "Space Grotesk", sans-serif;
+
+        font-size: 25px;
+
+    }
+
+
+    .workflow-step span {
+
+        color: var(--muted);
+
+        font-size: 11px;
+
+        font-weight: 800;
+
+        text-transform: uppercase;
+
+        letter-spacing: .8px;
+
+    }
+
+
+    .workflow-line {
+
+        flex: 1;
+
+        height: 1px;
+
+        margin: 0 15px;
+
+        background: var(--border);
+
+    }
+
 
     /* ================= EXPERIENCE ================= */
 
     .experience-layout {
+
         display: grid;
+
         grid-template-columns: 1.5fr 1fr;
+
         gap: 65px;
+
     }
 
+
     .timeline {
+
         position: relative;
 
         padding-left: 32px;
 
         border-left: 2px solid var(--border);
+
     }
 
+
     .timeline-item {
+
         position: relative;
 
         margin-bottom: 45px;
+
     }
 
+
     .timeline-item::before {
+
         content: "";
 
         position: absolute;
 
         left: -41px;
+
         top: 5px;
 
         width: 14px;
+
         height: 14px;
 
         background: white;
 
         border: 3px solid var(--primary);
+
         border-radius: 50%;
+
     }
 
+
     .timeline-date {
+
         color: var(--primary);
 
         font-size: 12px;
+
         font-weight: 800;
 
         margin-bottom: 4px;
+
     }
+
 
     .timeline-item h3 {
+
         font-size: 21px;
+
     }
 
+
     .company {
+
         margin: 4px 0 13px;
 
         color: var(--muted);
 
         font-size: 14px;
+
         font-weight: 700;
+
     }
 
+
     .timeline-item ul {
+
         padding-left: 20px;
 
         color: var(--text);
 
         font-size: 14px;
+
     }
 
+
     .timeline-item li {
+
         margin-bottom: 8px;
+
     }
+
 
     /* ================= PROJECTS ================= */
 
     .projects-grid {
+
         display: grid;
+
         grid-template-columns: repeat(2, 1fr);
+
         gap: 25px;
+
     }
 
+
     .project-card {
+
         display: flex;
+
         flex-direction: column;
 
         min-height: 370px;
@@ -528,31 +1266,44 @@
         background: white;
 
         border: 1px solid var(--border);
+
         border-radius: 20px;
 
         box-shadow: var(--shadow-sm);
 
         transition: .3s;
+
     }
 
+
     .project-card:hover {
+
         transform: translateY(-6px);
 
         border-color: #bfdbfe;
 
         box-shadow: var(--shadow-lg);
+
     }
 
+
     .project-top {
+
         display: flex;
+
         align-items: center;
+
         gap: 17px;
 
         margin-bottom: 20px;
+
     }
 
+
     .project-icon {
+
         width: 65px;
+
         height: 65px;
 
         padding: 10px;
@@ -562,27 +1313,40 @@
         background: #f8fafc;
 
         border: 1px solid var(--border);
+
         border-radius: 16px;
+
     }
 
+
     .project-category {
+
         display: block;
 
         color: var(--primary);
 
         font-size: 10px;
+
         font-weight: 800;
 
         text-transform: uppercase;
+
         letter-spacing: .8px;
+
     }
+
 
     .project-card h3 {
+
         font-family: "Space Grotesk", sans-serif;
+
         font-size: 22px;
+
     }
 
+
     .project-description {
+
         flex: 1;
 
         margin-bottom: 20px;
@@ -590,54 +1354,82 @@
         color: var(--text);
 
         font-size: 14px;
+
     }
 
+
     .tech-stack {
+
         display: flex;
+
         flex-wrap: wrap;
+
         gap: 7px;
 
         margin-bottom: 23px;
+
     }
 
+
     .tech {
+
         display: inline-flex;
+
         align-items: center;
+
         gap: 5px;
 
         padding: 5px 9px;
 
         color: var(--text);
+
         background: var(--background);
 
         border: 1px solid var(--border);
+
         border-radius: 7px;
 
         font-size: 11px;
+
         font-weight: 700;
+
     }
 
-    .tech img {
-        width: 15px;
-        height: 15px;
 
-        object-fit: contain;
+    /* AI TECH BADGE */
+
+    .ai-tech {
+
+        color: #6d28d9;
+
+        background: #f3e8ff;
+
+        border-color: #ddd6fe;
+
     }
 
-    /* STORE BUTTONS */
+
+    /* ================= STORE BUTTONS ================= */
 
     .store-buttons {
+
         display: flex;
+
         gap: 9px;
 
         padding-top: 18px;
 
         border-top: 1px solid var(--border);
+
     }
 
+
     .store-button {
+
         display: inline-flex;
+
         align-items: center;
+
         gap: 8px;
 
         padding: 9px 12px;
@@ -645,47 +1437,62 @@
         border-radius: 8px;
 
         font-size: 11px;
+
         font-weight: 700;
 
         transition: .2s;
+
     }
 
+
     .store-button img {
+
         width: 18px;
+
         height: 18px;
 
         object-fit: contain;
+
     }
+
 
     .play-store {
+
         color: #166534;
+
         background: #dcfce7;
+
     }
 
-    .play-store:hover {
-        background: #bbf7d0;
-    }
 
     .app-store {
+
         color: #334155;
+
         background: #f1f5f9;
+
     }
 
-    .app-store:hover {
-        background: #e2e8f0;
-    }
 
     /* ================= TECHNOLOGY STACK ================= */
 
     .technology-grid {
+
         display: grid;
+
         grid-template-columns: repeat(4, 1fr);
+
         gap: 18px;
+
     }
 
+
     .technology-card {
+
         display: flex;
+
         align-items: center;
+
         gap: 13px;
 
         padding: 17px;
@@ -693,42 +1500,130 @@
         background: white;
 
         border: 1px solid var(--border);
+
         border-radius: 14px;
 
         transition: .25s;
+
     }
 
+
     .technology-card:hover {
+
         transform: translateY(-4px);
 
         border-color: #bfdbfe;
 
         box-shadow: var(--shadow-md);
+
     }
 
+
     .technology-icon {
+
         width: 38px;
+
         height: 38px;
 
         object-fit: contain;
+
     }
+
+
+    .technology-ai-icon {
+
+        display: flex;
+
+        align-items: center;
+
+        justify-content: center;
+
+        width: 38px;
+
+        height: 38px;
+
+        flex-shrink: 0;
+
+        color: white;
+
+        border-radius: 11px;
+
+        font-size: 18px;
+
+        font-weight: 800;
+
+    }
+
+
+    .chatgpt-bg {
+
+        background: #10a37f;
+
+    }
+
+
+    .gemini-bg {
+
+        background: linear-gradient(
+
+            135deg,
+
+            #4285f4,
+
+            #9334e6
+
+        );
+
+    }
+
+
+    .claude-bg {
+
+        background: #d97757;
+
+    }
+
+
+    .cursor-bg {
+
+        background: #111827;
+
+    }
+
+
+    .antigravity-bg {
+
+        background: var(--gradient);
+
+    }
+
 
     .technology-card strong {
+
         display: block;
+
         font-size: 13px;
+
     }
 
+
     .technology-card span {
+
         color: var(--muted);
+
         font-size: 11px;
+
     }
+
 
     /* ================= CONTACT ================= */
 
     .contact-box {
+
         max-width: 850px;
 
         margin: auto;
+
         padding: 65px 35px;
 
         text-align: center;
@@ -736,34 +1631,53 @@
         background: white;
 
         border: 1px solid var(--border);
+
         border-radius: 25px;
 
         box-shadow: var(--shadow-md);
+
     }
 
+
     .contact-box h2 {
+
         margin-bottom: 13px;
 
         font-family: "Space Grotesk", sans-serif;
+
         font-size: 38px;
+
     }
 
+
     .contact-box p {
+
         margin-bottom: 30px;
 
         color: var(--muted);
+
     }
+
 
     .contact-links {
+
         display: flex;
+
         justify-content: center;
+
         flex-wrap: wrap;
+
         gap: 12px;
+
     }
 
+
     .contact-link {
+
         display: inline-flex;
+
         align-items: center;
+
         gap: 8px;
 
         padding: 12px 18px;
@@ -771,108 +1685,239 @@
         color: var(--dark);
 
         border: 1px solid var(--border);
+
         border-radius: 9px;
 
         font-size: 13px;
+
         font-weight: 700;
 
         transition: .2s;
+
     }
 
+
     .contact-link:hover {
+
         color: white;
+
         background: var(--primary);
+
         border-color: var(--primary);
+
     }
+
 
     /* ================= FOOTER ================= */
 
     footer {
+
         padding: 35px 20px;
 
         color: #94a3b8;
+
         background: #0f172a;
 
         text-align: center;
 
         font-size: 13px;
+
     }
+
 
     /* ================= MOBILE ================= */
 
     @media(max-width: 950px) {
 
+
         .hero {
+
             flex-direction: column-reverse;
+
             text-align: center;
+
         }
+
 
         .hero-description {
+
             margin-left: auto;
+
             margin-right: auto;
+
         }
+
 
         .hero-buttons {
+
             justify-content: center;
+
         }
+
 
         .hero h1 {
+
             font-size: 48px;
+
         }
+
 
         .metrics-grid {
+
             grid-template-columns: repeat(2, 1fr);
+
         }
+
 
         .experience-layout {
+
             grid-template-columns: 1fr;
+
         }
 
+
         .technology-grid {
+
             grid-template-columns: repeat(2, 1fr);
+
+        }
+
+
+        .ai-grid {
+
+            grid-template-columns: repeat(2, 1fr);
+
         }
 
     }
 
+
     @media(max-width: 650px) {
 
+
         .nav-links {
+
             display: none;
+
         }
+
 
         .hero h1 {
+
             font-size: 40px;
+
         }
+
 
         .hero h2 {
+
             font-size: 21px;
+
         }
+
+
+        .hero-image {
+
+            width: 230px;
+
+            height: 230px;
+
+        }
+
 
         .hero-image img {
+
             width: 220px;
+
             height: 220px;
+
         }
+
+
+        .floating-ai {
+
+            width: 40px;
+
+            height: 40px;
+
+            font-size: 17px;
+
+        }
+
 
         .about-layout,
+
         .projects-grid {
+
             grid-template-columns: 1fr;
+
         }
 
-        .technology-grid {
+
+        .technology-grid,
+
+        .ai-grid {
+
             grid-template-columns: 1fr;
+
         }
+
 
         .section-heading h2 {
+
             font-size: 28px;
+
         }
+
 
         .metrics-grid {
+
             padding: 20px 10px;
+
         }
 
+
         .metric h3 {
+
             font-size: 24px;
+
         }
+
+
+        .ai-intro h3 {
+
+            font-size: 28px;
+
+        }
+
+
+        .ai-workflow {
+
+            padding: 18px 8px;
+
+        }
+
+
+        .workflow-line {
+
+            margin: 0 5px;
+
+        }
+
+
+        .workflow-step {
+
+            min-width: 55px;
+
+        }
+
+
+        .workflow-step strong {
+
+            font-size: 20px;
+
+        }
+
 
     }
 
@@ -891,12 +1936,17 @@
     <div class="nav-container">
 
         <a class="logo" href="#">
+
             Amandeep<span>.Dev</span>
+
         </a>
+
 
         <div class="nav-links">
 
             <a href="#about">About</a>
+
+            <a href="#ai-development">AI Workflow</a>
 
             <a href="#experience">Experience</a>
 
@@ -905,7 +1955,9 @@
             <a href="#technologies">Tech Stack</a>
 
             <a href="#contact" class="nav-contact">
+
                 Let's Talk
+
             </a>
 
         </div>
@@ -921,7 +1973,9 @@
 
     <div class="hero">
 
+
         <div class="hero-content">
+
 
             <div class="status-badge">
 
@@ -931,30 +1985,44 @@
 
             </div>
 
+
             <h1>
 
-                Building Mobile
+                Mobile Engineer.
 
-                <span>Experiences</span>
+                <span>AI-Assisted.</span>
+
+                Product-Focused.
 
             </h1>
 
+
             <h2>
 
-                Flutter Developer & Mobile Application Engineer
+                Flutter Developer & AI-Assisted Product Engineer
 
             </h2>
+
 
             <p class="hero-description">
 
                 I'm Amandeep Singh, a Flutter Developer with 3+ years of
-                experience building scalable, high-performance Android and iOS
-                applications. I specialize in Flutter, Dart, Firebase, REST APIs,
-                GetX, Provider, third-party integrations, and production deployment.
+
+                experience building scalable Android and iOS applications.
+
+                I combine strong software engineering fundamentals with
+
+                modern AI-powered development workflows using ChatGPT,
+
+                Gemini, Claude, Cursor, and Antigravity to build and ship
+
+                products faster.
 
             </p>
 
+
             <div class="hero-buttons">
+
 
                 <a href="#projects" class="button button-primary">
 
@@ -962,12 +2030,15 @@
 
                 </a>
 
+
                 <a href="mailto:amanaulakh70822@gmail.com"
+
                     class="button button-secondary">
 
                     Contact Me
 
                 </a>
+
 
             </div>
 
@@ -976,10 +2047,34 @@
 
         <div class="hero-image">
 
+
+            <div class="floating-ai">
+
+                ✦
+
+            </div>
+
+
+            <div class="floating-ai">
+
+                ✦
+
+            </div>
+
+
+            <div class="floating-ai">
+
+                ⌘
+
+            </div>
+
+
             <img src="https://storage.googleapis.com/cms-storage-bucket/0dbfcc7a59cd1cf1733a.png"
+
                 alt="Amandeep Singh">
 
         </div>
+
 
     </div>
 
@@ -990,47 +2085,45 @@
 
 <div class="metrics">
 
+
     <div class="metrics-grid">
+
 
         <div class="metric">
 
             <h3>3+</h3>
 
-            <p>
-                Years Experience
-            </p>
+            <p>Years Experience</p>
 
         </div>
+
 
         <div class="metric">
 
             <h3>20+</h3>
 
-            <p>
-                Apps & Projects
-            </p>
+            <p>Apps & Projects</p>
 
         </div>
+
 
         <div class="metric">
 
-            <h3>Android</h3>
+            <h3>AI</h3>
 
-            <p>
-                & iOS Development
-            </p>
+            <p>Modern Development</p>
 
         </div>
+
 
         <div class="metric">
 
             <h3>End-to-End</h3>
 
-            <p>
-                Product Development
-            </p>
+            <p>Product Development</p>
 
         </div>
+
 
     </div>
 
@@ -1041,11 +2134,10 @@
 
 <section id="about">
 
+
     <div class="section-heading">
 
-        <h2>
-            About Me
-        </h2>
+        <h2>About Me</h2>
 
     </div>
 
@@ -1055,96 +2147,380 @@
 
         <div class="about-card">
 
+
             <span class="section-label">
+
                 Profile
+
             </span>
+
 
             <p>
 
-                I am a Flutter Developer focused on building reliable,
-                scalable, and visually polished mobile applications.
+
+                I am a Flutter Developer and AI-Assisted Product Engineer
+
+                focused on building reliable, scalable, and visually
+
+                polished mobile applications.
+
 
                 <br><br>
 
-                My experience covers the complete product lifecycle — from
-                converting designs into responsive interfaces to integrating
-                APIs, Firebase services, payments, notifications, and deploying
-                applications to app stores.
+
+                My experience covers the complete product lifecycle —
+
+                from converting designs into responsive interfaces to
+
+                integrating APIs, Firebase services, payments, notifications,
+
+                real-time systems, and deploying applications to app stores.
+
 
                 <br><br>
 
-                I enjoy solving complex technical problems and writing clean,
-                maintainable code that performs well in production.
+
+                I use modern AI tools as engineering accelerators while
+
+                maintaining strong fundamentals in architecture, debugging,
+
+                code quality, and production development.
+
 
             </p>
+
 
         </div>
 
 
         <div class="about-card">
 
+
             <span class="section-label">
+
                 Quick Overview
+
             </span>
+
 
             <div class="highlight-list">
 
+
                 <div class="highlight">
 
-                    <strong>
-                        Flutter
-                    </strong>
+                    <strong>Flutter</strong>
 
-                    <span>
-                        Primary Framework
-                    </span>
+                    <span>Primary Framework</span>
 
                 </div>
 
 
                 <div class="highlight">
 
-                    <strong>
-                        GetX
-                    </strong>
+                    <strong>AI Tools</strong>
 
-                    <span>
-                        State Management
-                    </span>
+                    <span>Modern Development</span>
 
                 </div>
 
 
                 <div class="highlight">
 
-                    <strong>
-                        Firebase
-                    </strong>
+                    <strong>Firebase</strong>
 
-                    <span>
-                        Backend Services
-                    </span>
+                    <span>Backend Services</span>
 
                 </div>
 
 
                 <div class="highlight">
 
-                    <strong>
-                        REST APIs
-                    </strong>
+                    <strong>REST APIs</strong>
 
-                    <span>
-                        Backend Integration
-                    </span>
+                    <span>Backend Integration</span>
 
                 </div>
+
 
             </div>
 
         </div>
 
+
     </div>
+
+</section>
+
+
+<!-- ================= AI DEVELOPMENT ================= -->
+
+<section id="ai-development">
+
+
+    <div class="section-heading">
+
+        <h2>AI-Powered Development</h2>
+
+    </div>
+
+
+    <div class="ai-intro">
+
+
+        <span class="section-label">
+
+            Modern Engineering Workflow
+
+        </span>
+
+
+        <h3>
+
+            I don't just use AI.
+
+            <span>I build faster with it.</span>
+
+        </h3>
+
+
+        <p>
+
+            I use modern AI tools as part of my daily engineering workflow —
+
+            from architecture exploration and debugging to code generation,
+
+            documentation, API integration, and building AI-powered products.
+
+        </p>
+
+
+    </div>
+
+
+    <div class="ai-grid">
+
+
+        <div class="ai-card">
+
+
+            <div class="ai-icon chatgpt-icon">
+
+                ✦
+
+            </div>
+
+
+            <div>
+
+                <h3>ChatGPT</h3>
+
+                <p>
+
+                    Problem solving, architecture exploration,
+
+                    debugging, documentation, and development assistance.
+
+                </p>
+
+            </div>
+
+
+        </div>
+
+
+        <div class="ai-card">
+
+
+            <div class="ai-icon gemini-icon">
+
+                ✦
+
+            </div>
+
+
+            <div>
+
+                <h3>Gemini</h3>
+
+                <p>
+
+                    AI-assisted development, research, multimodal
+
+                    workflows, and product experimentation.
+
+                </p>
+
+            </div>
+
+
+        </div>
+
+
+        <div class="ai-card">
+
+
+            <div class="ai-icon claude-icon">
+
+                ◈
+
+            </div>
+
+
+            <div>
+
+                <h3>Claude</h3>
+
+                <p>
+
+                    Code reasoning, refactoring, large codebase analysis,
+
+                    and technical problem solving.
+
+                </p>
+
+            </div>
+
+
+        </div>
+
+
+        <div class="ai-card">
+
+
+            <div class="ai-icon cursor-icon">
+
+                ⌘
+
+            </div>
+
+
+            <div>
+
+                <h3>Cursor</h3>
+
+                <p>
+
+                    AI-powered coding, codebase navigation,
+
+                    refactoring, and rapid feature development.
+
+                </p>
+
+            </div>
+
+
+        </div>
+
+
+        <div class="ai-card">
+
+
+            <div class="ai-icon antigravity-icon">
+
+                🚀
+
+            </div>
+
+
+            <div>
+
+                <h3>Antigravity</h3>
+
+                <p>
+
+                    AI-assisted product development and rapid
+
+                    experimentation from idea to implementation.
+
+                </p>
+
+            </div>
+
+
+        </div>
+
+
+        <div class="ai-card">
+
+
+            <div class="ai-icon api-icon">
+
+                ⚡
+
+            </div>
+
+
+            <div>
+
+                <h3>AI API Integration</h3>
+
+                <p>
+
+                    Integrating AI capabilities into real-world mobile
+
+                    applications and production products.
+
+                </p>
+
+            </div>
+
+
+        </div>
+
+
+    </div>
+
+
+    <div class="ai-workflow">
+
+
+        <div class="workflow-step">
+
+            <strong>01</strong>
+
+            <span>Explore</span>
+
+        </div>
+
+
+        <div class="workflow-line"></div>
+
+
+        <div class="workflow-step">
+
+            <strong>02</strong>
+
+            <span>Build</span>
+
+        </div>
+
+
+        <div class="workflow-line"></div>
+
+
+        <div class="workflow-step">
+
+            <strong>03</strong>
+
+            <span>Test</span>
+
+        </div>
+
+
+        <div class="workflow-line"></div>
+
+
+        <div class="workflow-step">
+
+            <strong>04</strong>
+
+            <span>Ship</span>
+
+        </div>
+
+
+    </div>
+
 
 </section>
 
@@ -1153,16 +2529,16 @@
 
 <section id="experience">
 
+
     <div class="experience-layout">
 
 
         <div>
 
+
             <div class="section-heading">
 
-                <h2>
-                    Experience
-                </h2>
+                <h2>Experience</h2>
 
             </div>
 
@@ -1172,131 +2548,218 @@
 
                 <div class="timeline-item">
 
+
                     <div class="timeline-date">
+
                         APR 2025 — PRESENT
+
                     </div>
 
+
                     <h3>
+
                         Flutter Developer
+
                     </h3>
 
+
                     <div class="company">
+
                         ToXSL Technologies · Chandigarh
+
                     </div>
+
 
                     <ul>
 
+
                         <li>
+
                             Developed Flutter modules including authentication,
+
                             product pages, dashboards, and task systems.
+
                         </li>
 
+
                         <li>
+
                             Integrated Firebase Authentication, Firestore,
+
                             Storage, and Push Notifications.
+
                         </li>
 
+
                         <li>
+
                             Implemented animations and Lottie integrations.
+
                         </li>
 
+
                         <li>
+
+                            Used AI-assisted development workflows to
+
+                            improve problem solving and development speed.
+
+                        </li>
+
+
+                        <li>
+
                             Fixed bugs, optimized UI logic, and improved navigation.
+
                         </li>
 
+
                     </ul>
+
 
                 </div>
 
 
                 <div class="timeline-item">
 
+
                     <div class="timeline-date">
+
                         JUN 2024 — APR 2025
+
                     </div>
+
 
                     <h3>
+
                         Flutter Developer
+
                     </h3>
 
+
                     <div class="company">
+
                         A Digital Blogger · Chandigarh
+
                     </div>
+
 
                     <ul>
 
+
                         <li>
+
                             Built responsive and pixel-perfect Flutter interfaces.
+
                         </li>
 
+
                         <li>
+
                             Integrated REST APIs with pagination, caching,
+
                             and error handling.
+
                         </li>
 
+
                         <li>
+
                             Implemented SharedPreferences for local storage.
+
                         </li>
 
+
                         <li>
+
                             Integrated FCM push notifications and messaging.
+
                         </li>
+
 
                     </ul>
+
 
                 </div>
 
 
                 <div class="timeline-item">
 
+
                     <div class="timeline-date">
+
                         FEB 2023 — APR 2024
+
                     </div>
+
 
                     <h3>
+
                         Flutter Developer
+
                     </h3>
 
+
                     <div class="company">
+
                         Scorpio Information Technology · Chandigarh
+
                     </div>
+
 
                     <ul>
 
+
                         <li>
+
                             Developed multiple Flutter applications from scratch
+
                             through production deployment.
+
                         </li>
 
+
                         <li>
+
                             Integrated Firebase Auth, Firestore, Storage,
+
                             and Push Notifications.
+
                         </li>
 
+
                         <li>
+
                             Implemented Provider state management.
+
                         </li>
 
+
                         <li>
+
                             Collaborated with backend developers for API integration.
+
                         </li>
+
 
                     </ul>
 
+
                 </div>
+
 
             </div>
+
 
         </div>
 
 
         <div>
 
+
             <div class="section-heading">
 
-                <h2>
-                    Education
-                </h2>
+                <h2>Education</h2>
 
             </div>
 
@@ -1306,59 +2769,93 @@
 
                 <div class="timeline-item">
 
+
                     <div class="timeline-date">
+
                         2023
+
                     </div>
 
+
                     <h3>
+
                         Bachelor of Arts
+
                     </h3>
 
+
                     <div class="company">
+
                         IGNOU University · 65%
+
                     </div>
+
 
                 </div>
 
 
                 <div class="timeline-item">
 
+
                     <div class="timeline-date">
+
                         2019
+
                     </div>
+
 
                     <h3>
+
                         12th Grade
+
                     </h3>
 
+
                     <div class="company">
+
                         Arya Senior Secondary School · 60%
+
                     </div>
+
 
                 </div>
 
 
                 <div class="timeline-item">
 
+
                     <div class="timeline-date">
+
                         6 MONTHS
+
                     </div>
+
 
                     <h3>
+
                         Android Development Training
+
                     </h3>
 
+
                     <div class="company">
+
                         Apptunix · Chandigarh
+
                     </div>
 
+
                 </div>
+
 
             </div>
 
+
         </div>
 
+
     </div>
+
 
 </section>
 
@@ -1367,11 +2864,10 @@
 
 <section id="projects">
 
+
     <div class="section-heading">
 
-        <h2>
-            Selected Projects
-        </h2>
+        <h2>Selected Projects</h2>
 
     </div>
 
@@ -1383,81 +2879,117 @@
 
         <div class="project-card">
 
+
             <div class="project-top">
 
+
                 <img class="project-icon"
+
                     src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png"
+
                     alt="MyDressr AI">
+
 
                 <div>
 
+
                     <span class="project-category">
+
                         AI · Fashion Technology
+
                     </span>
 
+
                     <h3>
+
                         MyDressr AI
+
                     </h3>
 
+
                 </div>
+
 
             </div>
 
 
             <p class="project-description">
 
+
                 AI-powered virtual fashion application that allows users
+
                 to change outfits on their body images using LightX AI
+
                 and background removal technology.
+
 
             </p>
 
 
             <div class="tech-stack">
 
-                <span class="tech">
 
-                    <img src="https://storage.googleapis.com/cms-storage-bucket/0dbfcc7a59cd1cf1733a.png">
+                <span class="tech">
 
                     Flutter
 
                 </span>
 
+
                 <span class="tech">
+
                     GetX
+
                 </span>
 
+
                 <span class="tech">
+
                     Dio
+
                 </span>
 
-                <span class="tech">
-                    LightX AI
+
+                <span class="tech ai-tech">
+
+                    ✦ AI Integration
+
                 </span>
+
+
+                <span class="tech ai-tech">
+
+                    LightX AI
+
+                </span>
+
 
             </div>
 
 
             <div class="store-buttons">
 
-                <a href="#" class="store-button play-store">
 
-                    <img src="https://cdn-icons-png.flaticon.com/512/300/300218.png">
+                <a href="#"
+
+                    class="store-button play-store">
 
                     Google Play
 
                 </a>
 
 
-                <a href="#" class="store-button app-store">
+                <a href="#"
 
-                    <img src="https://cdn-icons-png.flaticon.com/512/831/831276.png">
+                    class="store-button app-store">
 
                     App Store
 
                 </a>
 
+
             </div>
+
 
         </div>
 
@@ -1466,77 +2998,110 @@
 
         <div class="project-card">
 
+
             <div class="project-top">
 
+
                 <img class="project-icon"
+
                     src="https://cdn-icons-png.flaticon.com/512/3081/3081559.png"
+
                     alt="KofaKart">
+
 
                 <div>
 
+
                     <span class="project-category">
+
                         Quick Commerce
+
                     </span>
 
+
                     <h3>
+
                         KofaKart
+
                     </h3>
 
+
                 </div>
+
 
             </div>
 
 
             <p class="project-description">
 
+
                 Fast and scalable quick-commerce application built for
+
                 seamless ordering from local stores with optimized APIs
+
                 and smooth navigation.
+
 
             </p>
 
 
             <div class="tech-stack">
 
+
                 <span class="tech">
+
                     Flutter
+
                 </span>
 
+
                 <span class="tech">
+
                     GetX
+
                 </span>
 
+
                 <span class="tech">
+
                     Dio
+
                 </span>
 
+
                 <span class="tech">
+
                     REST API
+
                 </span>
+
 
             </div>
 
 
             <div class="store-buttons">
 
-                <a href="#" class="store-button play-store">
 
-                    <img src="https://cdn-icons-png.flaticon.com/512/300/300218.png">
+                <a href="#"
+
+                    class="store-button play-store">
 
                     Google Play
 
                 </a>
 
 
-                <a href="#" class="store-button app-store">
+                <a href="#"
 
-                    <img src="https://cdn-icons-png.flaticon.com/512/831/831276.png">
+                    class="store-button app-store">
 
                     App Store
 
                 </a>
 
+
             </div>
+
 
         </div>
 
@@ -1545,81 +3110,117 @@
 
         <div class="project-card">
 
+
             <div class="project-top">
 
+
                 <img class="project-icon"
+
                     src="https://cdn-icons-png.flaticon.com/512/3063/3063822.png"
+
                     alt="Haulr">
+
 
                 <div>
 
+
                     <span class="project-category">
+
                         Logistics · Transport
+
                     </span>
 
+
                     <h3>
+
                         Haulr
+
                     </h3>
 
+
                 </div>
+
 
             </div>
 
 
             <p class="project-description">
 
+
                 Transport and logistics application featuring live vehicle
+
                 tracking, Google Maps, real-time location updates, and
+
                 PayPal payment integration.
+
 
             </p>
 
 
             <div class="tech-stack">
 
+
                 <span class="tech">
+
                     Flutter
+
                 </span>
 
+
                 <span class="tech">
+
                     GetX
+
                 </span>
 
+
                 <span class="tech">
+
                     Firebase
+
                 </span>
 
+
                 <span class="tech">
+
                     Google Maps
+
                 </span>
 
+
                 <span class="tech">
+
                     PayPal
+
                 </span>
+
 
             </div>
 
 
             <div class="store-buttons">
 
-                <a href="#" class="store-button play-store">
 
-                    <img src="https://cdn-icons-png.flaticon.com/512/300/300218.png">
+                <a href="#"
+
+                    class="store-button play-store">
 
                     Google Play
 
                 </a>
 
 
-                <a href="#" class="store-button app-store">
+                <a href="#"
 
-                    <img src="https://cdn-icons-png.flaticon.com/512/831/831276.png">
+                    class="store-button app-store">
 
                     App Store
 
                 </a>
 
+
             </div>
+
 
         </div>
 
@@ -1628,84 +3229,114 @@
 
         <div class="project-card">
 
+
             <div class="project-top">
 
+
                 <img class="project-icon"
+
                     src="https://cdn-icons-png.flaticon.com/512/3135/3135768.png"
+
                     alt="Stock Pathshala">
+
 
                 <div>
 
+
                     <span class="project-category">
+
                         Education · Finance
+
                     </span>
 
+
                     <h3>
+
                         Stock Pathshala
+
                     </h3>
 
+
                 </div>
+
 
             </div>
 
 
             <p class="project-description">
 
+
                 Stock learning application with premium content access
+
                 through In-App Purchases. Worked on maintenance,
+
                 performance improvements, and bug fixing.
+
 
             </p>
 
 
             <div class="tech-stack">
 
+
                 <span class="tech">
+
                     Flutter
+
                 </span>
 
+
                 <span class="tech">
+
                     GetX
+
                 </span>
 
+
                 <span class="tech">
+
                     Firebase
+
                 </span>
 
+
                 <span class="tech">
+
                     In-App Purchases
+
                 </span>
+
 
             </div>
 
 
             <div class="store-buttons">
 
-        <a href="https://play.google.com/store/apps/details?id=com.codeclinic.stockpathshala&hl=en_IN"
-           target="_blank"
-           rel="noopener noreferrer"
-           class="store-button play-store">
 
-            <img src="https://cdn-icons-png.flaticon.com/512/300/300218.png">
+                <a href="https://play.google.com/store/apps/details?id=com.codeclinic.stockpathshala&hl=en_IN"
 
-            Google Play
+                    target="_blank"
 
-        </a>
+                    rel="noopener noreferrer"
+
+                    class="store-button play-store">
+
+                    Google Play
+
+                </a>
 
 
-        <!-- Apple App Store URL -->
-        <a href="YOUR_APP_STORE_URL_HERE"
-           target="_blank"
-           rel="noopener noreferrer"
-           class="store-button app-store">
+                <a href="#"
 
-            <img src="https://cdn-icons-png.flaticon.com/512/831/831276.png">
+                    class="store-button app-store">
 
-            App Store
+                    App Store
 
-        </a>
+                </a>
+
 
             </div>
+
 
         </div>
 
@@ -1714,77 +3345,110 @@
 
         <div class="project-card">
 
+
             <div class="project-top">
 
+
                 <img class="project-icon"
+
                     src="https://cdn-icons-png.flaticon.com/512/2927/2927347.png"
+
                     alt="Sahago">
+
 
                 <div>
 
+
                     <span class="project-category">
+
                         Scanner · Consumer App
+
                     </span>
 
+
                     <h3>
+
                         Sahago
+
                     </h3>
 
+
                 </div>
+
 
             </div>
 
 
             <p class="project-description">
 
+
                 Food and cosmetic scanning application that provides
+
                 product information and insights using cloud data
+
                 and responsive mobile interfaces.
+
 
             </p>
 
 
             <div class="tech-stack">
 
+
                 <span class="tech">
+
                     Flutter
+
                 </span>
 
+
                 <span class="tech">
+
                     Firebase
+
                 </span>
 
+
                 <span class="tech">
+
                     GetX
+
                 </span>
 
+
                 <span class="tech">
+
                     Scanner
+
                 </span>
+
 
             </div>
 
 
             <div class="store-buttons">
 
-                <a href="#" class="store-button play-store">
 
-                    <img src="https://cdn-icons-png.flaticon.com/512/300/300218.png">
+                <a href="#"
+
+                    class="store-button play-store">
 
                     Google Play
 
                 </a>
 
 
-                <a href="#" class="store-button app-store">
+                <a href="#"
 
-                    <img src="https://cdn-icons-png.flaticon.com/512/831/831276.png">
+                    class="store-button app-store">
 
                     App Store
 
                 </a>
 
+
             </div>
+
 
         </div>
 
@@ -1793,96 +3457,128 @@
 
         <div class="project-card">
 
+
             <div class="project-top">
 
+
                 <img class="project-icon"
+
                     src="https://cdn-icons-png.flaticon.com/512/733/733558.png"
+
                     alt="Gruve">
+
 
                 <div>
 
+
                     <span class="project-category">
+
                         Social Media · Video
+
                     </span>
 
+
                     <h3>
+
                         Gruve
+
                     </h3>
 
+
                 </div>
+
 
             </div>
 
 
             <p class="project-description">
 
+
                 Dynamic social media application featuring video streaming,
+
                 user interactions, HTTP APIs, WebSockets, and Provider
+
                 state management.
+
 
             </p>
 
 
             <div class="tech-stack">
 
+
                 <span class="tech">
+
                     Flutter
+
                 </span>
 
+
                 <span class="tech">
+
                     Provider
+
                 </span>
 
+
                 <span class="tech">
+
                     WebSockets
+
                 </span>
 
+
                 <span class="tech">
+
                     Video Streaming
+
                 </span>
+
 
             </div>
 
 
             <div class="store-buttons">
 
-                <a href="#" class="store-button play-store">
 
-                    <img src="https://cdn-icons-png.flaticon.com/512/300/300218.png">
+                <a href="#"
+
+                    class="store-button play-store">
 
                     Google Play
 
                 </a>
 
 
-                <a href="#" class="store-button app-store">
+                <a href="#"
 
-                    <img src="https://cdn-icons-png.flaticon.com/512/831/831276.png">
+                    class="store-button app-store">
 
                     App Store
 
                 </a>
 
+
             </div>
+
 
         </div>
 
 
     </div>
 
+
 </section>
 
 
 <!-- ================= TECHNOLOGIES ================= -->
 
-
 <section id="technologies">
+
 
     <div class="section-heading">
 
-        <h2>
-            Technology Stack
-        </h2>
+        <h2>Technology Stack</h2>
 
     </div>
 
@@ -1895,18 +3591,17 @@
         <div class="technology-card">
 
             <img class="technology-icon"
-                 src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flutter/flutter-original.svg"
-                 alt="Flutter">
+
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flutter/flutter-original.svg"
+
+                alt="Flutter">
+
 
             <div>
 
-                <strong>
-                    Flutter
-                </strong>
+                <strong>Flutter</strong>
 
-                <span>
-                    Cross-platform framework
-                </span>
+                <span>Cross-platform framework</span>
 
             </div>
 
@@ -1918,18 +3613,17 @@
         <div class="technology-card">
 
             <img class="technology-icon"
-                 src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/dart/dart-original.svg"
-                 alt="Dart">
+
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/dart/dart-original.svg"
+
+                alt="Dart">
+
 
             <div>
 
-                <strong>
-                    Dart
-                </strong>
+                <strong>Dart</strong>
 
-                <span>
-                    Programming language
-                </span>
+                <span>Programming language</span>
 
             </div>
 
@@ -1941,18 +3635,17 @@
         <div class="technology-card">
 
             <img class="technology-icon"
-                 src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/firebase/firebase-plain.svg"
-                 alt="Firebase">
+
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/firebase/firebase-plain.svg"
+
+                alt="Firebase">
+
 
             <div>
 
-                <strong>
-                    Firebase
-                </strong>
+                <strong>Firebase</strong>
 
-                <span>
-                    Backend & cloud services
-                </span>
+                <span>Backend & cloud services</span>
 
             </div>
 
@@ -1964,18 +3657,17 @@
         <div class="technology-card">
 
             <img class="technology-icon"
-                 src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/android/android-original.svg"
-                 alt="Android">
+
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/android/android-original.svg"
+
+                alt="Android">
+
 
             <div>
 
-                <strong>
-                    Android
-                </strong>
+                <strong>Android</strong>
 
-                <span>
-                    Mobile development
-                </span>
+                <span>Mobile development</span>
 
             </div>
 
@@ -1987,18 +3679,17 @@
         <div class="technology-card">
 
             <img class="technology-icon"
-                 src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/kotlin/kotlin-original.svg"
-                 alt="Kotlin">
+
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/kotlin/kotlin-original.svg"
+
+                alt="Kotlin">
+
 
             <div>
 
-                <strong>
-                    Kotlin
-                </strong>
+                <strong>Kotlin</strong>
 
-                <span>
-                    Native Android
-                </span>
+                <span>Native Android</span>
 
             </div>
 
@@ -2010,18 +3701,17 @@
         <div class="technology-card">
 
             <img class="technology-icon"
-                 src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg"
-                 alt="Java">
+
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg"
+
+                alt="Java">
+
 
             <div>
 
-                <strong>
-                    Java
-                </strong>
+                <strong>Java</strong>
 
-                <span>
-                    Programming language
-                </span>
+                <span>Programming language</span>
 
             </div>
 
@@ -2033,18 +3723,17 @@
         <div class="technology-card">
 
             <img class="technology-icon"
-                 src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/xcode/xcode-original.svg"
-                 alt="Xcode">
+
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/xcode/xcode-original.svg"
+
+                alt="Xcode">
+
 
             <div>
 
-                <strong>
-                    Xcode
-                </strong>
+                <strong>Xcode</strong>
 
-                <span>
-                    iOS development
-                </span>
+                <span>iOS development</span>
 
             </div>
 
@@ -2056,18 +3745,17 @@
         <div class="technology-card">
 
             <img class="technology-icon"
-                 src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg"
-                 alt="Git">
+
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg"
+
+                alt="Git">
+
 
             <div>
 
-                <strong>
-                    Git
-                </strong>
+                <strong>Git</strong>
 
-                <span>
-                    Version control
-                </span>
+                <span>Version control</span>
 
             </div>
 
@@ -2079,18 +3767,17 @@
         <div class="technology-card">
 
             <img class="technology-icon"
-                 src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg"
-                 alt="GitHub">
+
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg"
+
+                alt="GitHub">
+
 
             <div>
 
-                <strong>
-                    GitHub
-                </strong>
+                <strong>GitHub</strong>
 
-                <span>
-                    Code collaboration
-                </span>
+                <span>Code collaboration</span>
 
             </div>
 
@@ -2102,18 +3789,17 @@
         <div class="technology-card">
 
             <img class="technology-icon"
-                 src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/androidstudio/androidstudio-original.svg"
-                 alt="Android Studio">
+
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/androidstudio/androidstudio-original.svg"
+
+                alt="Android Studio">
+
 
             <div>
 
-                <strong>
-                    Android Studio
-                </strong>
+                <strong>Android Studio</strong>
 
-                <span>
-                    Android IDE
-                </span>
+                <span>Android IDE</span>
 
             </div>
 
@@ -2125,18 +3811,17 @@
         <div class="technology-card">
 
             <img class="technology-icon"
-                 src="https://www.svgrepo.com/show/375444/google-maps-platform.svg"
-                 alt="Google Maps">
+
+                src="https://www.svgrepo.com/show/375444/google-maps-platform.svg"
+
+                alt="Google Maps">
+
 
             <div>
 
-                <strong>
-                    Google Maps
-                </strong>
+                <strong>Google Maps</strong>
 
-                <span>
-                    Maps & location
-                </span>
+                <span>Maps & location</span>
 
             </div>
 
@@ -2148,18 +3833,17 @@
         <div class="technology-card">
 
             <img class="technology-icon"
-                 src="https://www.svgrepo.com/show/353801/google-admob.svg"
-                 alt="AdMob">
+
+                src="https://www.svgrepo.com/show/353801/google-admob.svg"
+
+                alt="AdMob">
+
 
             <div>
 
-                <strong>
-                    AdMob
-                </strong>
+                <strong>AdMob</strong>
 
-                <span>
-                    App monetization
-                </span>
+                <span>App monetization</span>
 
             </div>
 
@@ -2171,18 +3855,17 @@
         <div class="technology-card">
 
             <img class="technology-icon"
-                 src="https://www.svgrepo.com/show/375531/api.svg"
-                 alt="REST API">
+
+                src="https://www.svgrepo.com/show/375531/api.svg"
+
+                alt="REST API">
+
 
             <div>
 
-                <strong>
-                    REST APIs
-                </strong>
+                <strong>REST APIs</strong>
 
-                <span>
-                    Backend integration
-                </span>
+                <span>Backend integration</span>
 
             </div>
 
@@ -2194,18 +3877,17 @@
         <div class="technology-card">
 
             <img class="technology-icon"
-                 src="https://cdn.simpleicons.org/cloudinary/3448C5"
-                 alt="Cloudinary">
+
+                src="https://cdn.simpleicons.org/cloudinary/3448C5"
+
+                alt="Cloudinary">
+
 
             <div>
 
-                <strong>
-                    Cloudinary
-                </strong>
+                <strong>Cloudinary</strong>
 
-                <span>
-                    Media management
-                </span>
+                <span>Media management</span>
 
             </div>
 
@@ -2217,18 +3899,17 @@
         <div class="technology-card">
 
             <img class="technology-icon"
-                 src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg"
-                 alt="Figma">
+
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg"
+
+                alt="Figma">
+
 
             <div>
 
-                <strong>
-                    Figma
-                </strong>
+                <strong>Figma</strong>
 
-                <span>
-                    UI/UX design
-                </span>
+                <span>UI/UX design</span>
 
             </div>
 
@@ -2240,18 +3921,17 @@
         <div class="technology-card">
 
             <img class="technology-icon"
-                 src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postman/postman-original.svg"
-                 alt="Postman">
+
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postman/postman-original.svg"
+
+                alt="Postman">
+
 
             <div>
 
-                <strong>
-                    Postman
-                </strong>
+                <strong>Postman</strong>
 
-                <span>
-                    API testing
-                </span>
+                <span>API testing</span>
 
             </div>
 
@@ -2263,18 +3943,17 @@
         <div class="technology-card">
 
             <img class="technology-icon"
-                 src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg"
-                 alt="VS Code">
+
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg"
+
+                alt="VS Code">
+
 
             <div>
 
-                <strong>
-                    VS Code
-                </strong>
+                <strong>VS Code</strong>
 
-                <span>
-                    Development environment
-                </span>
+                <span>Development environment</span>
 
             </div>
 
@@ -2286,18 +3965,17 @@
         <div class="technology-card">
 
             <img class="technology-icon"
-                 src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flutter/flutter-original.svg"
-                 alt="Provider">
+
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flutter/flutter-original.svg"
+
+                alt="Provider">
+
 
             <div>
 
-                <strong>
-                    Provider
-                </strong>
+                <strong>Provider</strong>
 
-                <span>
-                    State management
-                </span>
+                <span>State management</span>
 
             </div>
 
@@ -2309,18 +3987,127 @@
         <div class="technology-card">
 
             <img class="technology-icon"
-                 src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flutter/flutter-original.svg"
-                 alt="GetX">
+
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flutter/flutter-original.svg"
+
+                alt="GetX">
+
 
             <div>
 
-                <strong>
-                    GetX
-                </strong>
+                <strong>GetX</strong>
 
-                <span>
-                    State management
-                </span>
+                <span>State management</span>
+
+            </div>
+
+        </div>
+
+
+        <!-- ChatGPT -->
+
+        <div class="technology-card">
+
+            <div class="technology-ai-icon chatgpt-bg">
+
+                ✦
+
+            </div>
+
+
+            <div>
+
+                <strong>ChatGPT</strong>
+
+                <span>AI development assistant</span>
+
+            </div>
+
+        </div>
+
+
+        <!-- Gemini -->
+
+        <div class="technology-card">
+
+            <div class="technology-ai-icon gemini-bg">
+
+                ✦
+
+            </div>
+
+
+            <div>
+
+                <strong>Google Gemini</strong>
+
+                <span>AI-powered development</span>
+
+            </div>
+
+        </div>
+
+
+        <!-- Claude -->
+
+        <div class="technology-card">
+
+            <div class="technology-ai-icon claude-bg">
+
+                ◈
+
+            </div>
+
+
+            <div>
+
+                <strong>Claude</strong>
+
+                <span>AI coding & reasoning</span>
+
+            </div>
+
+        </div>
+
+
+        <!-- Cursor -->
+
+        <div class="technology-card">
+
+            <div class="technology-ai-icon cursor-bg">
+
+                ⌘
+
+            </div>
+
+
+            <div>
+
+                <strong>Cursor</strong>
+
+                <span>AI code editor</span>
+
+            </div>
+
+        </div>
+
+
+        <!-- Antigravity -->
+
+        <div class="technology-card">
+
+            <div class="technology-ai-icon antigravity-bg">
+
+                🚀
+
+            </div>
+
+
+            <div>
+
+                <strong>Antigravity</strong>
+
+                <span>AI-assisted development</span>
 
             </div>
 
@@ -2329,6 +4116,7 @@
 
     </div>
 
+
 </section>
 
 
@@ -2336,117 +4124,167 @@
 
 <section id="contact">
 
+
     <div class="contact-box">
 
+
         <h2>
+
             Let's Build Something Great
+
         </h2>
+
 
         <p>
 
-            Have an idea for a mobile application or looking for a Flutter
-            developer to join your team? Let's connect.
+            Looking for a Flutter developer who can build products,
+
+            solve complex problems, and leverage modern AI tools
+
+            to move faster?
+
+
+            <br>
+
+            Let's connect.
 
         </p>
 
 
-<div class="contact-links">
-
-<div class="contact-links">
-
-    <!-- EMAIL -->
-
-    <a class="contact-link"
-       href="mailto:amanaulakh70822@gmail.com">
-
-        <svg width="18" height="18"
-             viewBox="0 0 24 24"
-             fill="none"
-             xmlns="http://www.w3.org/2000/svg">
-
-            <path
-                d="M4 4H20C21.1 4 22 4.9 22 6V18C22 19.1 21.1 20 20 20H4C2.9 20 2 19.1 2 18V6C2 4.9 2.9 4 4 4Z"
-                stroke="currentColor"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"/>
-
-            <polyline
-                points="22,6 12,13 2,6"
-                stroke="currentColor"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"/>
-
-        </svg>
-
-        Email Me
-
-    </a>
+        <div class="contact-links">
 
 
-    <!-- CALL -->
+            <!-- EMAIL -->
 
-    <a class="contact-link"
-       href="tel:7082244101">
+            <a class="contact-link"
 
-        <svg width="18" height="18"
-             viewBox="0 0 24 24"
-             fill="none"
-             xmlns="http://www.w3.org/2000/svg">
-
-            <path
-                d="M22 16.92V20.92C22 21.47 21.55 21.92 21 21.92C10.51 21.92 2 13.41 2 2.92C2 2.37 2.45 1.92 3 1.92H7C7.55 1.92 8 2.37 8 2.92C8 4.34 8.23 5.74 8.68 7.08C8.82 7.5 8.72 7.97 8.4 8.29L6.7 9.99C8.17 12.57 10.35 14.75 12.93 16.22L14.63 14.52C14.95 14.2 15.42 14.1 15.84 14.24C17.18 14.69 18.58 14.92 20 14.92C20.55 14.92 21 15.37 21 15.92V16.92H22Z"
-                stroke="currentColor"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"/>
-
-        </svg>
-
-        Call Me
-
-    </a>
+                href="mailto:amanaulakh70822@gmail.com">
 
 
-    <!-- LINKEDIN -->
+                <svg width="18"
 
-    <a class="contact-link"
-       href="https://in.linkedin.com/in/aman-aulakh-60557a1b4"
-       target="_blank"
-       rel="noopener noreferrer">
+                    height="18"
 
-        <svg width="18" height="18"
-             viewBox="0 0 24 24"
-             fill="currentColor"
-             xmlns="http://www.w3.org/2000/svg">
+                    viewBox="0 0 24 24"
 
-            <path
-                d="M20.45 20.45H16.89V14.87C16.89 13.54 16.87 11.83 15.05 11.83C13.2 11.83 12.92 13.28 12.92 14.77V20.45H9.36V8.99H12.78V10.56H12.83C13.3 9.66 14.47 8.71 16.2 8.71C19.81 8.71 20.45 11.09 20.45 14.19V20.45ZM5.34 7.42C4.2 7.42 3.28 6.5 3.28 5.36C3.28 4.22 4.2 3.3 5.34 3.3C6.48 3.3 7.4 4.22 7.4 5.36C7.4 6.5 6.48 7.42 5.34 7.42ZM7.12 20.45H3.56V8.99H7.12V20.45ZM22.22 0H1.77C0.79 0 0 0.77 0 1.72V22.28C0 23.23 0.79 24 1.77 24H22.22C23.2 24 24 23.23 24 22.28V1.72C24 0.77 23.2 0 22.22 0Z"/>
+                    fill="none"
 
-        </svg>
-
-        LinkedIn
-
-    </a>
-
-</div>
+                    xmlns="http://www.w3.org/2000/svg">
 
 
-    <!-- GitHub -->
-    <!-- <a class="contact-link"
-       href="https://github.com/YOUR-GITHUB-USERNAME"
-       target="_blank"
-       rel="noopener noreferrer">
+                    <path
 
-        <i class="fa-brands fa-github"></i>
-        GitHub
+                        d="M4 4H20C21.1 4 22 4.9 22 6V18C22 19.1 21.1 20 20 20H4C2.9 20 2 19.1 2 18V6C2 4.9 2.9 4 4 4Z"
 
-    </a> -->
+                        stroke="currentColor"
 
-</div>
+                        stroke-width="2"
+
+                        stroke-linecap="round"
+
+                        stroke-linejoin="round"/>
+
+
+                    <polyline
+
+                        points="22,6 12,13 2,6"
+
+                        stroke="currentColor"
+
+                        stroke-width="2"
+
+                        stroke-linecap="round"
+
+                        stroke-linejoin="round"/>
+
+
+                </svg>
+
+
+                Email Me
+
+            </a>
+
+
+            <!-- CALL -->
+
+            <a class="contact-link"
+
+                href="tel:7082244101">
+
+
+                <svg width="18"
+
+                    height="18"
+
+                    viewBox="0 0 24 24"
+
+                    fill="none"
+
+                    xmlns="http://www.w3.org/2000/svg">
+
+
+                    <path
+
+                        d="M22 16.92V20.92C22 21.47 21.55 21.92 21 21.92C10.51 21.92 2 13.41 2 2.92C2 2.37 2.45 1.92 3 1.92H7C7.55 1.92 8 2.37 8 2.92C8 4.34 8.23 5.74 8.68 7.08C8.82 7.5 8.72 7.97 8.4 8.29L6.7 9.99C8.17 12.57 10.35 14.75 12.93 16.22L14.63 14.52C14.95 14.2 15.42 14.1 15.84 14.24C17.18 14.69 18.58 14.92 20 14.92C20.55 14.92 21 15.37 21 15.92V16.92H22Z"
+
+                        stroke="currentColor"
+
+                        stroke-width="2"
+
+                        stroke-linecap="round"
+
+                        stroke-linejoin="round"/>
+
+
+                </svg>
+
+
+                Call Me
+
+            </a>
+
+
+            <!-- LINKEDIN -->
+
+            <a class="contact-link"
+
+                href="https://in.linkedin.com/in/aman-aulakh-60557a1b4"
+
+                target="_blank"
+
+                rel="noopener noreferrer">
+
+
+                <svg width="18"
+
+                    height="18"
+
+                    viewBox="0 0 24 24"
+
+                    fill="currentColor"
+
+                    xmlns="http://www.w3.org/2000/svg">
+
+
+                    <path
+
+                        d="M20.45 20.45H16.89V14.87C16.89 13.54 16.87 11.83 15.05 11.83C13.2 11.83 12.92 13.28 12.92 14.77V20.45H9.36V8.99H12.78V10.56H12.83C13.3 9.66 14.47 8.71 16.2 8.71C19.81 8.71 20.45 11.09 20.45 14.19V20.45ZM5.34 7.42C4.2 7.42 3.28 6.5 3.28 5.36C3.28 4.22 4.2 3.3 5.34 3.3C6.48 3.3 7.4 4.22 7.4 5.36C7.4 6.5 6.48 7.42 5.34 7.42ZM7.12 20.45H3.56V8.99H7.12V20.45ZM22.22 0H1.77C0.79 0 0 0.77 0 1.72V22.28C0 23.23 0.79 24 1.77 24H22.22C23.2 24 24 23.23 24 22.28V1.72C24 0.77 23.2 0 22.22 0Z"/>
+
+
+                </svg>
+
+
+                LinkedIn
+
+            </a>
+
+
+        </div>
+
 
     </div>
+
 
 </section>
 
@@ -2455,7 +4293,7 @@
 
 <footer>
 
-    © 2026 Amandeep Singh · Flutter Developer · Building digital experiences.
+    © 2026 Amandeep Singh · Flutter Developer · AI-Assisted Product Engineer.
 
 </footer>
 ```
