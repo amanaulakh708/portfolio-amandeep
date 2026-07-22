@@ -4202,6 +4202,20 @@
     });
 </script>
 
+
+    <script>
+    document.querySelectorAll('.app-store').forEach(button => {
+        const url = button.getAttribute('href');
+
+        if (!url || url === '#' || url.trim() === '') {
+            button.style.display = 'none';
+        } else {
+            button.style.display = 'inline-flex';
+        }
+    });
+</script>
+
+
 </body>
 
 </html>
